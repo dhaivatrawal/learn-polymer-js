@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Iron Dropdown</h1>
+              <p>The &lt;iron-dropdown&gt; element is used to reveal the hidden   dropdown content. The implementation of elements that uses iron-dropdown   can have comboboxes, menubuttons, selects, etc.</p>
+              <p>The &lt;iron-dropdown&gt; element displays the attributes where the   .dropdown-trigger configured relative to the position of   .dropdown-content.</p>
+              <h3>Example</h3>
+              <p>Open command prompt and go to your project folder to implement iron-dropdown element by using the following command: </p>
+			  
+			<div class="card-body  p-1   " style="background-color: black">				
+			  <pre class="text-light mt-2">bower install PolymerElements/iron-dropdown -save </pre>
+	  		</div>
+			  
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/iron-dropdown1.png" alt="iron dropdown 1"> </pre><br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/iron-dropdown2.png" alt="iron dropdown 2"></pre>
+			  
+			  
+<pre class="line-numbers">
+	<code class="language-js">			  
+		&lt;!DOCTYPE html>  
+		&lt;html>  
+		   &lt;head>  
+			  &lt;title>iron-dropdown&lt;/title>  
+			  &lt;base href = "http://polygit.org/components/">  
+			  &lt;script src = "webcomponentsjs/webcomponents-lite.min.js">&lt;/script>  
+			  &lt;link rel = "import" href = "iron-dropdown/demo/x-select.html">  
+			  &lt;link rel = "import" href = "paper-input/paper-input.html">  
+			  &lt;link rel = "import" href = "paper-button/paper-button.html">  
+		  &lt;style>  
+				 .dropdown-trigger{  
+					background-color: DarkCyan ;  
+					border-radius: 4px;  
+					color: white;  
+				 }  
+				 .dropdown-content {  
+					background-color: white;  
+					line-height: 15px;  
+					border-radius: 5px;  
+					box-shadow: 0px 2px 5px #ccc;  
+					padding: 20px;  
+				 }  
+			  &lt;/style>  
+		   &lt;/head>  
+	   	&lt;body>  
+			  &lt;h3>Iron-dropdown Example&lt;/h3>  
+			  &lt;x-select>  
+				 &lt;paper-button class = "dropdown-trigger">Click Me !&lt;/paper-button>  
+				 &lt;div class = "dropdown-content">  
+					&lt;p>Hello !!! &lt;br/>  
+					&lt;p>This is an iron-dropdown &lt;br/> example of Polymerjs.&lt;/p>  
+				 &lt;/div>  
+			  &lt;/x-select>  
+		   &lt;/body>  
+		&lt;/html>  
+	</code>
+</pre>
+			  
+			  
+	        <p><br>
+            <strong>Output:</strong></p>
+            <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/iron-dropdown3.png" alt="iron dropdown 3"><br>
+            <p>Polmer version 2.2.3 is broken for this element. You can use it on upgraded version  2.2.4</p>
+            <p><br>
+            </p>		  
+			  
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

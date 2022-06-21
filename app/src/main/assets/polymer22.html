@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer paper-checkbox</h1>
+              <p>The polymer paper-checkbox is a checkbox used to check or uncheck it.   Normally, checkboxes are used to select multiple options from a set. To   get the paper-checkbox in your directory, you should use the following   command in the command prompt. </p>
+			  
+			<div class="card-body  p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">bower install --save PolymerElements/paper-checkbox</pre>
+	  		</div>
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/paper-checkbox1.png" alt="paper checkbox1"></pre>	  
+		    
+              <h3>Example</h3>
+              <p>Create an index.html file and add the following code in it to see the use of paper-checkbox element in Polymer.js.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+	    &lt;!doctype html>  
+		&lt;html>  
+		   &lt;head>  
+			  &lt;link rel = 'import' href = 'my-app.html'>  
+		   &lt;/head>  
+		   &lt;body>  
+			  &lt;h2>Paper-Card Example&lt;/h2>  
+			  &lt;my-app>&lt;/my-app>  
+		   &lt;/body>  
+		&lt;/html>  
+	</code>
+</pre>
+			  
+			  <p>Now, open the my-app.html file and include the following code in it.</p>
+<pre class="line-numbers">
+	<code class="language-js">
+		   &lt;link rel = 'import' href = 'bower_components/polymer/polymer.html'>  
+		&lt;link rel = "import" href = "bower_components/paper-button/paper-button.html">  
+		&lt;link rel = "import" href = "bower_components/paper-styles/paper-styles.html">  
+		&lt;link rel = "import" href = "bower_components/paper-card/paper-card.html">  
+		&lt;link rel = "import" href = "bower_components/iron-icons/iron-icons.html">  
+		&lt;link rel = "import" href = "bower_components/iron-icons/communication-icons.html">  
+		&lt;link rel = "import" href = "bower_components/paper-checkbox/paper-checkbox.html">  
+		&lt;dom-module id = 'my-app'>    
+		   &lt;template>  
+			  &lt;style is = "custom-style">  
+				 paper-checkbox {  
+					font-family: 'Roboto', sans-serif;  
+					margin: 24px;  
+				 }  
+				 paper-checkbox.styled {  
+					align-self: center;  
+					border: 1px solid var(--paper-green-200);  
+					padding: 8px 16px;  
+					--paper-checkbox-checked-color: var(--paper-green-500);  
+					--paper-checkbox-checked-ink-color: var(--paper-green-500);  
+					--paper-checkbox-unchecked-color: var(--paper-green-900);  
+					--paper-checkbox-unchecked-ink-color: var(--paper-green-900);  
+					--paper-checkbox-label-color: var(--paper-green-500);  
+					--paper-checkbox-label-spacing: 0;  
+					--paper-checkbox-margin: 8px 16px 8px 0;  
+					--paper-checkbox-vertical-align: top;  
+				 }  
+			  &lt;/style>       
+			  &lt;paper-checkbox class = "styled">  
+				 Checkbox With a long label  
+			  &lt;/paper-checkbox>  
+			  &lt;paper-checkbox disabled>Disabled&lt;/paper-checkbox>  
+		   &lt;/template>    
+		   &lt;script>  
+			  Polymer ({  
+				 is: 'my-app',  
+				 ready: function() {  
+					this.async(function() {            
+					});  
+				 }  
+			  });  
+		   &lt;/script>  
+		&lt;/dom-module>  
+		
+	</code>
+</pre>
+			  
+			  <p><strong>Output:</strong></p>
+              <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/paper-checkbox2.png" alt="paper checkbox 2">
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

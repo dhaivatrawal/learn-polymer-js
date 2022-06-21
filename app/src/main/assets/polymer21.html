@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Polymer-Paper Fab</h1>
+              <p>In Polymer.js, paper-fab is a floating action button used to provide a ripple effect when the user touches the button. </p>
+              <p>The button may be a simple button or an image placed within it. </p>
+              <p>Use the following command to install this element in your project directory and use in your application. </p>
+			  
+			<div class="card-body  p-1   "style="background-color: black" >				
+			  <pre class="text-light mt-2">bower install --save PolymerElements/paper-fab  </pre>
+	  		</div>
+			  
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/paper-fab1.png" alt="paper fab 1"></pre>
+		    
+              <h3>Example</h3>
+              <p>Create an index.html file and add the following code in it to see the use of paper-fab element in Polymer.js. </p>
+			  
+			  
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;!doctype html>  
+		 &lt;html>  
+		    &lt;head>  
+		 	  &lt;link rel = 'import' href = 'my-app.html'>  
+		    &lt;/head>  
+		    &lt;body>      
+		 	  &lt;my-app>&lt;/my-app>  
+		 &lt;/body>  
+	   &lt;/html>  
+	</code>
+</pre>
+			  <p>Now, open my-app.html file and include the following code in it. </p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;link rel = 'import' href = 'bower_components/polymer/polymer.html'>  
+		&lt;link rel = "import" href = "bower_components/iron-icons/iron-icons.html">  
+		&lt;link rel = "import" href = "bower_components/paper-fab/paper-fab.html">  
+		&lt;dom-module id = 'my-app'>  
+		   &lt;template>  
+			  &lt;style is = "custom-style">  
+				 paper-fab {  
+					display: inline-block;  
+					margin: 8px;  
+				 }  
+				 paper-fab[mini] {  
+					--paper-fab-background: #FF5722;  
+				 }  
+				 paper-fab[label] {  
+					font-size: 20px;  
+					--paper-fab-background: #2196F3;  
+				 }  
+			  &lt;/style>  
+		  &lt;h3>Paper-Fab Example &lt;/h3>  
+			  &lt;paper-fab icon = "alarm-on">&lt;/paper-fab>  
+			  &lt;paper-fab mini icon = "android">&lt;/paper-fab>  
+			  &lt;paper-fab mini icon = "home">&lt;/paper-fab>  
+		   &lt;/template>  
+	  	   &lt;script>  
+			  Polymer ({  
+				 is: 'my-app',  
+				 ready: function() {  
+					this.async(function() {   
+					});  
+				 }  
+			  });  
+		   &lt;/script>  
+		&lt;/dom-module>  
+		
+	</code>
+</pre>
+			  
+			   <p><strong>Output:</strong></p>
+                <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/paper-fab2.png" alt="paper fab 2">
+			  
+			  
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/row"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="8dp"
+        app:cardMaxElevation="1dp"
+        app:cardUseCompatPadding="true"
+        app:cardBackgroundColor="@color/my"
+        >
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="6dp"
+            android:layout_margin="2dp"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imgstory"
+                    android:layout_width="60dp"
+                    android:layout_height="55dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignParentTop="true"
+                    android:src="@mipmap/pjs" />
+
+                <TextView
+                    android:id="@+id/lbltitle"
+                    android:layout_toRightOf="@id/imgstory"
+                    android:layout_alignTop="@id/imgstory"
+                    android:layout_alignBottom="@id/imgstory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/app_name"
+                    android:textColor="#000000"
+                    android:textSize="22sp"
+                    android:autoSizeTextType="uniform"
+                    android:autoSizeMinTextSize="22sp"
+                    android:autoSizeMaxTextSize="25sp"
+                    android:autoSizeStepGranularity="2sp"
+                    />
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>

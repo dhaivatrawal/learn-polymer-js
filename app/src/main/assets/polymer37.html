@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Google Map</h1>
+              <p>The polymer google map element is used to display a google map on the website.</p>
+			  
+	<pre class="line-numbers">
+		<code class="language-js">
+		     &LT;google-map latitude = "17.77591" longitude = "-524.41144" api-key = "4586">&LT;/google-map>  
+		
+		</code>
+	</pre>
+		    <p>You can use googlemap-directions to show the map directions between a startAddress and endAddress.</p>
+			  
+	<pre class="line-numbers">
+		<code class="language-js">
+			 &LT;google-map-directions map="[[map]]"  
+			   start-address = "United States" end-address = "Mountain View">  
+			&LT;/google-map-directions>  
+		
+		</code>
+	</pre>
+			  <P>Run the following command to install google-map element in your project directory. After that you can use this element in your application:</P>
+			  
+<div class="card-body  p-1   "style="background-color: black" >				
+  <pre class="text-light mt-2">bower install PolymerElements/google-map -save  </pre>
+</div>
+			  
+		    <h3>Example:</h3>
+              <p>Create an index.html file and add the following code in it to see the usage of google-mapelement in Polymer.js.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		   &LT;!DOCTYPE html>  
+		&LT;html>  
+		&LT;head>  
+		&LT;title>google-map&LT;/title>  
+		&LT;meta name = "viewport" content = "width = device-width, initial-scale = 1">  
+		&LT;script src = "bower_components/webcomponentsjs/webcomponents-lite.min.js">&LT;/script>  
+		&LT;link rel = "import"  
+				 href = "https://rawgit.com/Download/polymer-cdn/master/lib/google-map/google-map.html">  
+		&LT;style>  
+				 google-map {  
+					height: 250px;  
+					width: 380px;  
+					border: 2px solid black;  
+					margin: 25px 20px 20px 20px;  
+				 }  
+		&LT;/style>  
+		&LT;/head>  
+		&LT;body>  
+		&LT;h2>Google-Map Example&LT;/h2>  
+		&LT;demo-map>&LT;/demo-map>  
+		&LT;dom-module id = "demo-map">  
+		&LT;template>  
+		&LT;google-map map = "{{map}}" latitude = "37.779" longitude = "-122.3892">  
+		&LT;/google-map>  
+		&LT;/template>  
+		&LT;/dom-module>  
+		&LT;script>  
+				 Polymer ({  
+					is: "demo-map", properties: {  
+					   Address: {  
+						  type: String, value: "San Francisco"  
+					   }, map: "demo-map"  
+					}  
+				 });  
+		&LT;/script>  
+		&LT;/body>  
+		&LT;/html>  
+
+	</code>
+</pre>
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

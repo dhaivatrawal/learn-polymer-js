@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:layout_gravity="center_horizontal">
+
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:paddingRight="50dp"
+            android:id="@+id/onetext"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Vivek Dhameliya"
+            android:textSize="25sp"
+            android:textStyle="bold" />
+
+
+        <RadioButton
+            android:paddingRight="50dp"
+            android:id="@+id/oneradio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/onetext"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Present"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/tworadio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/oneradio"
+            android:layout_weight="1"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Absent"
+            android:textSize="16sp" />
+
+
+    </RadioGroup>
+
+</LinearLayout>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Google Streetview Pano</h1>
+              <p>The Google streetview pano element is used to display a streetview panorama.</p>
+              <h3>Example</h3>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;google-streetview-pano  
+		pano-id = "CWskcsTEZBNXaD8gG-zATA"  
+		heading = "151"  
+		pitch = "-4"  
+		zoom = "0.6"  
+		disable-default-ui>  
+		&lt;/google-streetview-pano>  
+		
+	</code>
+</pre>
+			  <P>You can set a position attribute to a position with a computed value. See the following example:</P>
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;google-streetview-pano  
+		position = "[[_myComputedPosition()]]"  
+		heading = "151"  
+		pitch = "-4"  
+		zoom = "0.6"  
+		disable-default-ui>  
+		&lt;/google-streetview-pano>  
+	</code>
+</pre>		
+			  
+			  <p>You can see a lot of panorama available on Google Maps page.</p> 
+			  <p><b>https://plus.google.com/+GoogleMaps/posts/HJbE9zbEeh2</b> You can obtain the panorama by its id. For example:</p>
+			  
+   <pre class="line-numbers">
+		<code class="language-js">
+		 
+		google.com/maps/views/view/102684927602131521305/photo/1szTnskrdKIAAAGuu3fZRw  
+		</code>
+	</pre>
+			  
+			  <p>In the above url, the bold item is pano-id.</p>
+			  
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Iron-Ajax</h1>
+              <p>The &lt;iron-ajax&gt; element is used to make Ajax calls. </p>
+              <p><strong>Syntax: </strong></p>
+			  
+<pre class="line-numbers">
+ 	<code class="language-js" > 
+		&lt;iron-ajax  
+		   auto url = "https://www.googleapis.com/youtube/v3/search"  
+		   params = '{"part":"snippet", "q":"polymer", "key": "YOUTUBE_API_KEY", "type": "video"}'  
+		   handle-as = "json"  
+		   on-response = "handleResponse"  
+		   debounce-duration = "500">  
+		&lt;/iron-ajax>
+	</code>
+</pre>
+			  
+		    <p>When you set auto to true, a request is made by an element every time its properties url, params, or body are changed. </p>
+              <h2>Parameter explanation: </h2>
+              <p><strong>url: </strong> It specifies an attribute where you place the url to the API endpoint.</p>
+              <p><strong>params: </strong> It specifies an attribute where you can pass the JSON with the request parameters.</p>
+              <p><strong>handle-as: </strong> It specifies what data must be stored in the response property. By default, the data is stored in the JSON format.</p>
+              <p><strong>on-response: </strong> It specifies an attribute which can tell the iron-ajax component by what method the response is handled.</p>
+              <p>Changing multiple attributes sequentially causes automatically generated requests to be debounced.</p>
+              <p>You can call generateRequest on the element to trigger a request explicitly.</p>
+              <h3>Example:</h3>
+			  
+ <pre class="line-numbers">
+ 	<code class="language-js" > 
+		&lt;!DOCTYPE html>  
+		&lt;html>  
+		   &lt;head>  
+			  &lt;title>iron-ajax&lt;/title>  
+			  &lt;link rel = "import"  
+				 href = "https://cdn.rawgit.com/download/polymer-cdn/1.0.1/lib/paper-input/paper-input.html">  
+			  &lt;link rel = "import"  
+				 href = "https://cdn.rawgit.com/download/polymer-cdn/1.0.1/lib/iron-ajax/iron-ajax.html">  
+		   &lt;/head>  
+
+		   &lt;body>
+		   &lt;p>&nbsp;&lt;/p>
+		  
+                    &lt;p>&nbsp;&lt;/p>  
+			  &lt;dom-module id = "data-bind">  
+
+				 &lt;template>  
+					&lt;paper-input label = "Write something..." id = "input" value = "{{q::input}}"  
+					   autofocus>  
+					&lt;/paper-input>  
+					&lt;p>You typed: &lt;b>{{q}}&lt;/b>&lt;/p>  
+					&lt;p>Echo: &lt;b>{{echo}}&lt;/b>&lt;/p>  
+
+					&lt;iron-ajax auto  
+					   url = "http://dict.leo.org/dictQuery/m-query/conf/ende/query.conf/strlist.json"  
+					   params = "{'q': q}" handle-as = "json" on-response = "_handleResponse"  
+					   debounce-duration = "500">  
+					&lt;/iron-ajax>  
+			    &lt;/template>  
+
+				 &lt;script>  
+					(function () {  
+					   Polymer ({  
+						  is: 'data-bind', properties: {  
+							 echo: {  
+								type: String, value: 'waiting ...', reflectToAttribute: true  
+							 }  
+						  },  
+						  _handleResponse: function(event, request) {  
+							 var response = request.response;  
+							 this.echo = JSON.stringify(response);  
+						  }  
+					   });  
+					})();  
+				 &lt;/script>  
+			 &lt;/dom-module>  
+
+			  &lt;data-bind>&lt;/data-bind>  
+			&lt;/body>  
+			&lt;/html>  
+	</code>
+</pre>
+ 	  
+			  
+			  
+            <br>
+            <p><strong>Output:</strong></p>
+         
+            <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/iron-ajax.png" alt="iron ajax"> 
+			  <br><p></p>
+			<img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/iron-ajax2.png" alt="iron ajax 2"><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

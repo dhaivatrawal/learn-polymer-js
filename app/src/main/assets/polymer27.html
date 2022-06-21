@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer paper input</h1>
+              <p>Polymer paper-input is a text-field combined with styling. Use the   following command in your command prompt to get paper-input in your   directory in working condition.</p>
+			  
+			<div class="card-body  p-1   "style="background-color: black" >				
+			  <pre class="text-light mt-2">bower install --save PolymerElements/paper-input </pre>
+	  		</div>
+			  
+		    <h3>Example</h3>
+              <p>Create an index.html file and add the following code in it to see the use of paper input element in Polymer.js. </p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;!doctype html>  
+		&lt;html>  
+		   &lt;head>  
+			  &lt;link rel = 'import' href = 'my-app.html'>  
+		   &lt;/head>  
+		   &lt;body>      
+			  &lt;my-app>&lt;/my-app>  
+		   &lt;/body>  
+		&lt;/html>  
+		
+	</code>
+</pre>
+			  
+			  <p>Now, open my-app.html file and include the following code in it. </p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		   &lt;link rel = 'import' href = 'bower_components/polymer/polymer.html'>  
+		&lt;link rel = "import" href="bower_components/iron-icons/iron-icons.html">  
+		&lt;link rel = "import" href = "bower_components/paper-input/paper-input.html">  
+	   &lt;dom-module id = 'my-app'>  
+		   &lt;template>  
+			  &lt;style>  
+				 paper-input {  
+					max-width: 300px;      
+				 }  
+			  &lt;/style>  
+		  &lt;h3>Paper-Input Example &lt;/h3>  
+			  &lt;paper-input label = "User Name">  
+				 &lt;iron-icon icon = "account-circle"  prefix>&lt;/iron-icon>  
+			  &lt;/paper-input>  
+		  &lt;paper-input label = "Password">  
+				 &lt;iron-icon icon = "lock-outline" prefix>&lt;/iron-icon>  
+			  &lt;/paper-input>  
+		   &lt;/template>  
+	      &lt;script>  
+			  Polymer ({  
+				 is: 'my-app', ready: function() {  
+					this.async(function() {           
+					});  
+				 }  
+			  });  
+		   &lt;/script>  
+		&lt;/dom-module>  
+		
+	</code>
+</pre>
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Polymer Shadow DOM and Styling</h1>
+              <p>Shadow DOM is a new property of DOM which is used to build   components. Shadow DOM provides a way to attach a hidden separate DOM to   an element.</p>
+              <h3>See a simple HTML example:</h3>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+   &lt;header-demo>  
+   &lt;header>  
+      &lt;h1>  
+         &lt;button>   
+	</code>
+</pre>
+
+<p>In the above code, the header component includes page title and menu button. </p>
+<p>Now see the Shadow DOM usage. It allows users to locate the children in a scoped subtree, which is known as shadow tree. </p>
+
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+      &lt;header-demo>  
+       #shadow-root  
+       &lt;header>  
+          &lt;h1>  
+          &lt;button>  
+		  
+	</code>
+</pre>
+
+<p>Shadow root is placed at the top of the shadow tree and the elements   attached to the shadow tree is called shadow host. This shadow host   contains a property called shadowRoot which specifies the shadow root.</p>
+<h2>Shadow DOM and Composition</h2>
+<p>If there is an element in the shadow DOM, you can render the   element's children by adding the &lt;slot&gt; element to the shadow   tree.</p>
+<p>For example, use the following shadow tree for &lt;header-demo&gt;.</p>
+
+<pre class="line-numbers">
+	<code class="language-js">
+	&lt;header>  
+       &lt;h1>&lt;slot>&lt;/slot>&lt;/h1>  
+       &lt;button>Menu&lt;/button>  
+    &lt;/header>  	 
+		
+	</code>
+</pre>
+
+<p>Add the children to <my-header> element as: </p>
+
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+	&lt;header-demo>Shadow DOM&lt;/header-demo>  
+	</code>
+</pre>
+
+<p>The header replaces the </slot> element with the above specified children as:</p>
+
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+	&lt;header-demo>  
+       &lt;header>  
+          &lt;h1>Shadow DOM&lt;/h1>  
+          &lt;button>Menu&lt;/button>  
+       &lt;/header>  
+    &lt;/header-demo>  
+	</code>
+</pre>
+
+
+<p>If there is no node allocated to the slot, the fallback content is displayed.</p>
+
+<pre class="line-numbers">
+	<code class="language-js">
+	&lt;my-element>  
+	   #shadow-root  
+	   &lt;slot id = "myimgicon">  
+		  &lt;img src = "img-demo.png">  
+	   &lt;/slot>  
+	   &lt;slot>&lt;/slot>  
+	&lt;my-element> 
+		
+	</code>
+</pre>
+
+<p>You can provide your own icon for an element as -</p>
+
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+	 &lt;my-element>  
+       &lt;img slot = "myimgicon" src = "warning.png">  
+    &lt;my-element>  	
+	</code>
+</pre>
+
+<br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

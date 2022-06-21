@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Data System</h1>
+              <p>Polymer facilitates you to change in element's properties by taking various actions based on data changes. These actions are: </p>
+              <p><strong>Observers:</strong> It is used to invoke the callbacks whenever the data changes.</p>
+              <p><strong>Computed Properties:</strong> It is used to compute the   virtual properties based on other properties. It also re-computes them   whenever the input data changes.</p>
+              <p><strong>Data Bindings:</strong> It is used to update the properties, attributes, or the text content of a DOM node using annotations whenever the data changes.</p>
+              <h2>Data Paths</h2>
+              <p>Path is a string in data system which is used to provide a property   or a sub-property relative to a scope, where scope can be a host   element.</p>
+              <p>Data binding is a technique which is used to link paths to different   elements. You can change data from one element to another, if the   elements are connected with data binding.</p>
+              <h3>Example</h3>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+	    &lt;dom-module id = "my-name">  
+       &lt;template>  
+          . . .  
+          &lt;address-card address="{{myAddress}}">&lt;/address-card>  
+       &lt;/template>  
+       . . .  
+    &lt;/dom-module>  	 
+		
+	</code>
+</pre>	
+			  
+		    <p>In the above example, you can see that there are two paths (my-name   and address-card) are connected with data binding where   &lt;address-card&gt; is in the local DOM of the &lt;my-name&gt; element.</p>
+              <h2>Path Segments in Polymer.js</h2>
+              <p>Following is a list of special types of path segments in Polymer.js:</p>
+              <ul>
+                <li>You can use wild card (*) character as the last segment in a path.</li>
+                <li>You can display the array mutations to a given array by placing string splices as the last segment in a path.</li>
+                <li>Array item path specifies an item in an array and the numeric path segment specifies an array index.</li>
+              </ul>
+              <p>In a Data path, path segment is a property name and it includes two types of paths:</p>
+              <ul>
+                <li>The path segments separated by dots. For example: "apple.grapes.orange".</li>
+                <li>In an array of strings, each array element is either a path segment   or a dotted path. For example: ["apple","grapes","orange"],   ["apple.grapes","orange"].</li>
+              </ul>
+              <h2>Data Flow</h2>
+              <p>Let's take an example to see two-way binding of data flow. Create a file named index.html and use the following code in it.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+	&lt;!doctype html>  
+    &lt;html>  
+       &lt;head>  
+          &lt;title>Polymer Example&lt;/title>  
+          &lt;script src = "bower_components/webcomponentsjs/webcomponents-lite.js">&lt;/script>  
+          &lt;link rel = "import" href = "bower_components/polymer/polymer.html">  
+          &lt;link rel = "import" href = "my-element.html">  
+       &lt;/head>   
+       &lt;body>  
+          &lt;my-element>&lt;/my-element>  
+       &lt;/body>  
+    &lt;/html>  	 
+		
+	</code>
+</pre>
+			  
+			  <p>Create another file named my-element.html and use the following code.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+	&lt;link rel = "import" href = "bower_components/polymer/polymer-element.html">  
+    &lt;link rel = "import" href = "prop-element.html">  
+    //it specifies the start of an element's local DOM  
+    &lt;dom-module id = "my-element">  
+       &lt;template>  
+          &lt;prop-element my-prop="{{demoProp}}">&lt;/prop-element>  
+          &lt;p>  
+             Present value: &lt;span>{{demoProp}}&lt;/span>  
+          &lt;/p>  
+       &lt;/template>   
+       &lt;script>  
+          Polymer ({  
+             is: "my-element", properties: {  
+                demoProp: String  
+             }  
+          });  
+       &lt;/script>  
+    &lt;/dom-module>  	 
+		
+	</code>
+</pre>		
+			  
+	<p>Now, create one more file named prop-element.html and use the following code:</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+//it specifies the start of an element's local DOM  
+&lt;dom-module id = "prop-element">  
+   &lt;template>  
+      &lt;button on-click = "onClickFunc">Change value&lt;/button>  
+   &lt;/template>  
+   &lt;script>  
+      Polymer ({  
+         is: "prop-element", properties: {  
+            myProp: {  
+               type: String,  
+               notify: true,  
+               readOnly: true,  
+               value: 'This is initial value...'  
+            }  
+         },  
+         onClickFunc: function(){  
+            this._setMyProp('This is new value after clicking the button...');  
+         }  
+      });  
+   &lt;/script>  
+&lt;/dom-module>	 
+		
+	</code>
+</pre>			
+			  
+<p><strong>Output:</strong></p>
+<img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/polymer-data-system1.png" alt="Polymer Data System 1">
+<p>Click the button and you can see the change in the value:</p>
+<img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/polymer-data-system2.png" alt="Polymer Data System 2">
+<h2>Linking Two Paths</h2>
+<p>Use linkPaths() method to link the two path to the same objects. You   need to use data binding to generate changes between the elements.</p>
+			  
+<h3>Example</h3>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+	linkPaths('myTeam', 'players.5');  	 
+		
+	</code>
+</pre>	
+			  <p>The path linkage can be removed using the unlinkPaths method as shown below:</p>
+<pre class="line-numbers">
+	<code class="language-js">
+	unlinkPaths('myTeam');   	 
+		
+	</code>
+</pre>	
+			  
+<h2>Observers</h2>
+<p>The observers are the changes that occur to the element's data invoke methods. Following are the types of observers.</p>
+<ul>
+  <li>Simple observers are used to observe a single property.</li>
+  <li>Complex observers are used to observe more than one property or path.</li>
+</ul>
+<h2>Data Binding</h2>
+<p>Data binding is used to connect the property or an attribute of an element from the host element in its local DOM.</p>
+<p>Data binding can be created by adding annotations to DOM template like this:</p>
+
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;dom-module id = "myhost-element">  
+	   &lt;template>  
+		  &lt;target-element target-property = "{{myhostProperty}}">&lt;/target-element>  
+	   &lt;/template>  
+	&lt;/dom-module> 	 
+		
+	</code>
+</pre>
+			  <p>The anatomy of data binding in the local DOM template:</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+	    property-name=annotation-or-compound-binding  	 
+		
+	</code>
+</pre>
+	
+			  <p>or</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+	    attribute-name$=annotation-or-compound-binding   	 
+		
+	</code>
+</pre>
+			  
+<p>The left-hand side of the binding specifies the target property or   attribute, while the righthand side of the binding specifies either a   binding annotation or a compound binding. The text in binding annotation   are enclosed by double curly bracket ({{ }}) or double square bracket   ([[ ]]) delimiters and the compound binding includes one or more string   literal binding annotations.</p>
+<p>Following are the helper elements, which are used with data binding use cases -</p>
+<p><strong>Template Repeater:</strong> An instance of the template's contents can be created for each item in an array.</p>
+<p><strong>Array Selector:</strong> It provides the selection state for an array of structured data.</p>
+<p><strong>Conditional Template:</strong> You can identify the content, if the condition is true.</p>
+<p><strong>Auto-binding Template:</strong> It specifies the data binding outside of polymer element.</p>
+<p>The DOM tree triggers a dom-change event, if the helper elements   update the DOM tree. Sometimes, you can interact with DOM by changing   the model data, not by interacting with the created nodes. Therefore,   you can use the dom-change event to access the nodes directly. </p>
+			  
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

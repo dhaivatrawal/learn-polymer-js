@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Polymer Custom Elements</h1>
+              <p>Polymer.js framework facilitates you to create custom elements using standard HTML elements.</p>
+              <h3>Features of custom elements:</h3>
+              <ul>
+                <li>It facilitates you to name custom elements with associating class. </li>
+                <li>When you change the state of custom element instance, it will request the lifecycle callbacks.</li>
+                <li>If you change the attributes on an instance, then callback will be requested.</li>
+              </ul>
+              <p>You can define the custom element using ES6 class. Class can be associated with the custom element like this:</p>
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+	//ElementDemo class is extending the HTMLElement   
+    class ElementDemo extends HTMLElement {   
+       // code here  
+    };  
+    //link the new class with an element name  
+    window.customElements.define('element-demo', ElementDemo);  
+	
+	</code>
+</pre>
+			 
+			  
+			  <p>We can use custom element as standard element:</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+		<element-demo></element-demo>  
+	</code>
+</pre>	
+			  
+		    <h3>Custom Element Lifecycle</h3>
+              <p>Custom element lifecycle provides a set of custom element reactions which are responsible for changing in element lifecycle</p>
+              <p>Following is a list of those custom element reactions:</p>
+              <p><strong>Table:</strong></p>
+            <table class="table-responsive table-striped">
+                <tbody class="table">
+                  <tr>
+                    <th>Index</th>
+                    <th>Reactions</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>1)</td>
+                    <td>constructor</td>
+                    <td>This element's reaction is called when you create an element or define the previously-created element.</td>
+                  </tr>
+                  <tr>
+                    <td>2)</td>
+                    <td>connectedCallback</td>
+                    <td>This element's reaction is called when you add an element to a document.</td>
+                  </tr>
+                  <tr>
+                    <td>3)</td>
+                    <td>disconnectedCallback</td>
+                    <td>This element's reaction is called when you remove an element from a document.</td>
+                  </tr>
+                  <tr>
+                    <td>4)</td>
+                    <td>attributeChangedCallback</td>
+                    <td>This element's reaction is called whenever you change, append, remove, or replace an element from a document.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h2>Element Upgrades</h2>
+              <p>We can use custom elements before defining them by specification and   any existing instances of an element will be upgraded to the custom   class by adding a definition to that element. </p>
+              <p>The custom element state contains the following values -</p>
+              <p><strong>Uncustomized: </strong> The valid custom element name is either a built-in element or an unknown element, which cannot become a custom element.</p>
+              <p><strong>Undefined: </strong> The element can have a valid custom element name, but it cannot be defined.</p>
+              <p><strong>Custom:</strong> The element can have a valid custom element name, which can be defined and upgraded.</p>
+              <p><strong>Failed: </strong> Trying to upgrade the failed element of an invalid class. </p>
+              <h2>Define an Element</h2>
+              <p>We can define a custom elements by creating a class which extends   Polymer.Element and it passes the class to customElements.define method.   The class contains is getter method that returns a HTML tag name of the   custom element.</p>
+              <h3>For example:</h3>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+//ElementDemo class is extending the Polymer.Element   
+class ElementDemo extends Polymer.Element {  
+   static get is() { return 'element-demo'; }  
+   static get properties() {  
+      . . .  
+      . . .  
+   }  
+   constructor(){  
+      super();  
+      . . .  
+      . . .  
+   }  
+   . . .  
+   . . .  
+}  
+//Associate the new class with an element name  
+window.customElements.define(ElementDemo.is, ElementDemo);  
+// create an instance with createElement  
+var el1 = document.createElement('element-demo'); 
+		
+	</code>
+</pre>
+			  
+		    <h2>Import And APIs</h2>
+			  
+		    <p>We can define Polymer elements by specifying the three HTML imports: </p>
+              <p><strong>polymer-element.html:</strong> It is used to specify the Polymer Element base class.</p>
+              <p><strong>legacy-element.html:</strong> It is used to extend   Polymer.Element using Polymer. Legacy Element base class and adds 1.x   compatible legacy API. It also creates hybrid elements by defining the   legacy Polymer() factory method.</p>
+              <p><strong>polymer.html:</strong> It is used to comprise the Polymer base classes along with helper elements, which were included in the 1.x polymer.html.</p>
+              <h3>Define an Element in the Main HTML Document</h3>
+              <p>The HTMLImports.whenReady() function is used to define an element in the main HTML document.</p>
+              <h3>Example</h3>
+              <p>Let's take an example to define an element in the main HTML document. Create an index.html file and use the following code:</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+   &lt;!doctype html>  
+    &lt;html lang = "en">  
+       &lt;head>  
+          &lt;title>Polymer Example&lt;/title>  
+          &lt;script src = "bower_components/webcomponentsjs/webcomponents-lite.js">&lt;/script>  
+          &lt;link rel = "import" href = "bower_components/polymer/polymer.html">  
+          &lt;link rel = "import" href = "define-element.html">  
+       &lt;/head>   
+       &lt;body>  
+          &lt;define-element>&lt;/define-element>  
+       &lt;/body>  
+    &lt;/html>  
+	
+	</code>
+</pre>		
+			  <p>Now create a custom element called define-element.html and use the following code.</p>
+			  
+ <pre class="line-numbers">
+	<code class="language-js">
+		 
+	&lt;dom-module id = "define-element">  
+       &lt;template>  
+          &lt;h2>Hello JavaTpoint!!&lt;/h2>  
+       &lt;/template>  
+       &lt;script>  
+          HTMLImports.whenReady(function(){  
+             Polymer ({  
+                is: "define-element"  
+             })  
+          })    
+       &lt;/script>  
+    &lt;/dom-module>  
+	</code>
+</pre>
+			  
+<p><strong>Output:</strong></p>
+<img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/polymer-custom-elements.png" alt="Polymer Custom Elements">
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

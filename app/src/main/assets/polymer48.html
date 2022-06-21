@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Polymer Platinum Bluetooth</h1>
+              <p>The polymer platinum Bluetooth element is used to interact with nearby Bluetooth devices.</p>
+              <p>Run the following command to use platinum bluetooth in your application and install it in your directory.</p>
+<div class="card-body  p-1   "style="background-color: black" >				
+  <pre class="text-light mt-2">bower install --save PolymerElements/platinum-bluetooth  </pre>
+</div>		
+			 
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/platinum-bluetooth.png" alt="platinum bluetooth"></pre>
+		    
+              <h2>Example</h2>
+              <p>It will install all the related elements of platinum-bluetooth under the bower_components folder.</p>
+              <p>Create an index.html file and add the following code in it to see the usage of platinum-bluetooth element in Polymer.js.</p>
+<pre class="line-numbers">
+	<code class="language-js">
+    &lt;!doctype html>  
+    &lt;html>  
+       &lt;head>  
+          &lt;title>Polymer Example&lt;/title>  
+          &lt;script src = "bower_components/webcomponentsjs/webcomponents-lite.js">&lt;/script>  
+          &lt;link rel = "import" href = "bower_components/polymer/polymer.html">  
+          &lt;link rel = "import" href = "bower_components/paper-styles/demo-pages.html">  
+          &lt;link rel = "import" href = "bower_components/paper-button/paper-button.html">  
+          &lt;link rel = "import" href = "bower_components/platinum-bluetooth/platinum-bluetooth-device.html">  
+       &lt;/head>    
+       &lt;body>  
+          &lt;section>  
+             &lt;paper-button raised>Get bluetooth device&lt;/paper-button>  
+          &lt;/section>  
+          &lt;script src = "platinum_bluetooth.js">&lt;/script>  
+       &lt;/body>  
+    &lt;/html>   
+		
+	</code>
+</pre>
+			  
+			  <p>Now, create another file called platinum_bluetooth.js and include the following code:</p>
+			  
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+	document.addEventListener('WebComponentsReady', function() {  
+       var mybatteryDevice = document.querySelector('platinum-bluetooth-device');  
+       var mybutton = document.querySelector('paper-button');  
+       mybutton.addEventListener('click', function() {  
+          console.log('The requested bluetooth device advertising a battery service...');  
+          mybatteryDevice.request().then(function(device) {  
+             console.log('Bluetooth device has been found...');  
+             console.log('The device name is: ' + device.name);  
+          })  
+          .catch(function(error) {  
+             console.error('Sorry!No device found...', error);  
+          });  
+       });  
+    });  
+	</code>
+</pre>			
+			  
+<p><strong>Output:</strong></p>
+<img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/platinum-bluetooth1.png" alt="platinum bluetooth 1">
+			  
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

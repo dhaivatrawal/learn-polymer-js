@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Polymer Google YouTube</h1>
+              <p>The Polymer google-youtube element contains a YouTube video player.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 &lt;google-youtube  
+		   video-id = "....."  
+		   height = "300px"  
+		   width = "300px"  
+		   rel = "0"  
+		   start = "2"  
+		   autoplay = "1">  
+		&lt;/google-youtube> 
+	</code>
+</pre>
+		    <p>All the embedded player parameters</p> <p> <b> https://developers.google.com/youtube/player_parameters</b> are supported by   google-youtube. You can select any of these parameter and set as an   attribute on google-youtube.</p>
+              <h3>Example</h3>
+              <p>Run the following command to install google-youtube element in your   project directory. After that you can use this element in your   application:</p>
+			  
+<div class="card-body  p-1   "style="background-color: black" >				
+  <pre class="text-light mt-2">bower install PolymerElements/google-youtube --save  </pre>
+</div>
+			  
+			  <p>Create an index.html file and add the following code in it to see the usage of google-youtube element in Polymer.js.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		     &lt;!DOCTYPE html>  
+				&lt;html>  
+				   &lt;head>  
+					  &lt;title>google-youtube&lt;/title>  
+					  &lt;meta charset = "UTF-8">  
+					  &lt;script src = "bower_components/webcomponentsjs/webcomponents.js">&lt;/script>  
+					  &lt;link rel = "import" href = "/bower_components/google-youtube/google-youtube.html">  
+
+					  &lt;style>  
+						 .youtube {  
+							margin: 10px 10px 10px 5px;  
+						 }  
+					  &lt;/style>  
+				   &lt;/head>  
+
+				   &lt;body>  
+					  &lt;google-youtube   
+						 class = "youtube"  
+						 video-id = "MaWcS-10NIw"   
+						 height = "200px"   
+						 start = "3"  
+						 width = "400px">  
+					  &lt;/google-youtube>  
+				   &lt;/body>  
+				&lt;/html>  
+
+	</code>
+</pre>
+	
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

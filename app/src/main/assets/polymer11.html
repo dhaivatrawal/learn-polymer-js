@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Polymer Iron-Collapse</h1>
+              <p>The &lt;iron-collapse&gt; elements are used to collapse a content.   You can use opened or toggle() with &lt;iron-collapse&gt; element to   show or hide the content. </p>
+              <p>The max-height/max-width of the collapsible element is automatically adjusted by the iron-collapse element. </p>
+              <p>You can use custom properties and mixins for styling &lt;iron-collapse&gt; element. </p>
+              <p><strong>--iron-collapse-transition-duration:</strong> It specifies the duration of animation transition. Its default value is 300ms.</p>
+              <h2>Example</h2>
+              <p>Open command prompt and use the following commands to navigate to your project folder and implement iron-collapse element.</p>
+			  
+			  
+			   <p><strong>bower install PolymerElements/iron-collapse --save</strong></p> 
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/iron-collapse1.png" alt="iron collapse 1"/>  </pre>
+			   <p><strong>bower install PolymerElements/paper-toggle-button --save</strong></p> 
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/iron-collapse2.png" alt="iron collapse 2"/></pre>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;p>This command will install both the elements in bower_components folder and then you can import both s in your index page. &lt;/p>  
+		&lt;p>&lt;strong>For example:&lt;/strong>&lt;/p>  
+		&lt;div class="codeblock">&lt;textarea name="code" class="html">  
+		&lt;link rel = "import" href = "iron-collapse/iron-collapse.html">  
+		&lt;link rel = "import" href = "paper-toggle-button/paper-toggle-button.html">  		  
+	</code>
+</pre>
+			  
+		    <h3>See this example:</h3>
+			
+<pre class="line-numbers">
+	<code class="language-js">
+				 &lt;!DOCTYPE html>  
+					&lt;html>  
+					   &lt;head>  
+						  &lt;title>iron-collapse&lt;/title>  
+						  &lt;base href = "http://polygit.org/polymer+:master/components/">  
+						  &lt;link rel = "import" href = "polymer/polymer.html">  
+						  &lt;link rel = "import" href = "paper-toggle-button/paper-toggle-button.html">  
+						  &lt;link rel = "import" href = "iron-collapse/iron-collapse.html">  
+
+						  &lt;p>
+				       &lt;p>
+					   &lt;style>  
+							 #coll {  
+								display: flex;  
+								width: 500px;  
+							 }  
+							 demo-collapse{  
+								border: 2px solid LightGrey;  
+								width: 50%;  
+							 }  
+						  &lt;/style>  
+					   &lt;/head>  
+
+					   &lt;body>  
+						  &lt;h3>Iron Collapse Example&lt;/h3>  
+						  &lt;dom-module id = "demo-collapse">  
+						    &lt;template>  
+						      &lt;paper-toggle-button checked = "{{opened}}">Collapse this&lt;/paper-toggle-button>  
+						      &lt;iron-collapse opened = "[[opened]]">  
+						        &lt;div>&lt;p>This is polymerjs iron-collapse.&lt;/p>&lt;/div>  
+					          &lt;/iron-collapse>  
+					        &lt;/template>  
+					     &lt;/dom-module>  
+
+						  &lt;script>  
+							 Polymer ({  
+								is: 'demo-collapse',  
+							 });  
+						  &lt;/script>  
+
+						  &lt;div id = "coll">  
+							 &lt;demo-collapse>&lt;/demo-collapse>  
+						  &lt;/div>  
+                          &lt;/p>
+						  
+						  &lt;/p>
+						&lt;/body>  
+						&lt;/html>
+							
+	</code>
+</pre>
+			  
+			  	<p><strong>Output:</strong></p>
+                <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/iron-collapse3.png" alt="iron collapse 3"> <br><br>
+			  
+			    <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/iron-collapse4.png" alt="iron collapse 4">
+			  
+			  
+			  
+  <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

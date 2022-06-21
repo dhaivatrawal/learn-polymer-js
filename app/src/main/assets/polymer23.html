@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Paper Button</h1>
+              <p>The Polymer paper button is a simple button that has a ripple effect   from the point of contact. To get the paper-button in your directory,   you should use the following command in the command prompt.</p>
+			  
+			<div class="card-body  p-1   "style="background-color: black" >				
+			  <pre class="text-light mt-2">bower install --save PolymerElements/paper-button </pre>
+	  		</div>
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/paper-button1.png" alt="paper button 1"></pre>
+		    
+              <h3>Example</h3>
+              <p>The following example specifies the use of paper-button element in   Polymer.js. Create an index.html file and add the following code in it.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;!doctype html>  
+		&lt;html>  
+		   &lt;head>  
+			  &lt;link rel = 'import' href = 'my-app.html'>  
+			   &lt;/head>  
+		   &lt;body>  
+			  &lt;h2>Paper-Button Example&lt;/h2>  
+			  &lt;my-app>&lt;/my-app>  
+		   &lt;/body>  
+    	&lt;/html>  
+	</code>
+</pre>
+	
+			  <p>Now, open the my-app.html file and include the following code in it.</p>
+	<h3>Example</h3>
+			  
+<pre class="line-numbers">
+	<code class="language-js">		 
+		&lt;link rel = 'import' href = 'bower_components/polymer/polymer.html'>  
+		&lt;link rel = "import" href = "bower_components/paper-button/paper-button.html">  
+		&lt;link rel = "import" href = "bower_components/paper-styles/paper-styles.html">  
+		&lt;dom-module id = 'my-app'>  
+		   &lt;template>  
+			  &lt;div class = "container">  
+				 &lt;paper-button toggles raised class = "green">Active&lt;/paper-button>  
+				 &lt;paper-button disabled class = "disabled">Disabled&lt;/paper-button>  
+			  &lt;/div>  
+			  &lt;div class = "container" >&lt;/div>  
+			  &lt;style is = "custom-style">  
+				 #container {  
+					display: flex;  
+				 }  
+				 paper-button {  
+					font-family: 'Roboto', 'Noto', sans-serif;  
+					font-weight: normal;  
+					font-size: 14px;  
+					-webkit-font-smoothing: antialiased;  
+				 }  
+				 paper-button.green:hover {  
+					background-color: var(--paper-green-400);  
+				 }  
+				 paper-button.green {  
+					background-color: var(--paper-green-500);  
+					color: white;  
+				 }  
+				 paper-button.green[active] {  
+					background-color: var(--paper-red-500);  
+				 }  
+				 paper-button.disabled {  
+					color: black;  
+					background-color:#969696;  
+				 }  
+			  &lt;/style>  
+		   &lt;/template>  
+		   &lt;script>  
+			  Polymer ({  
+				 is: 'my-app',  
+				 ready: function() {  
+					this.async(function() {  
+					});  
+				 }  
+			  });  
+		   &lt;/script>  
+		&lt;/dom-module>  
+		
+	</code>
+</pre>
+			  
+			  <p><strong>Output:</strong></p>
+			  <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/paper-button2.png" alt="paper button 2">
+				
+ <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+<body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Paper Badge</h1>
+              <p>The paper-badge is a circular text badge which is used to represent a   status or notification. It is positioned at the top right corner of an   element. It can contain an icon by adding the icon attribute. To get the   paper-badge and the icons in your directory, you should use the   following two commands in the command prompt.</p>
+			  
+			  
+			<div class="card-body  p-1   "style="background-color: black" >				
+			  <pre class="text-light mt-2">bower install --save PolymerElements/paper-badge </pre>
+	  		</div>
+			  
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/paper-badge.png" alt="paper badge"></pre>
+			  
+			<div class="card-body  p-1   "style="background-color: black" >				
+			  <pre class="text-light mt-2">bower install --save PolymerElements/iron-iconset</pre>
+	  		</div>
+			  
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/paper-badge1.png" alt="paper badge 1"></pre>
+		    
+              <h3>Example</h3>
+              <p>The following example specifies the use of paper-badge element in   Polymer.js. Create an index.html file and add the following code in it.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;!doctype html>  
+		&lt;html>  
+		   &lt;head>  
+			  &lt;link rel = 'import' href = 'my-app.html'>  
+		   &lt;/head>  
+		   &lt;body>  
+			  &lt;my-app>&lt;/my-app>  
+		   &lt;/body>  
+		&lt;/html> 
+	</code>
+</pre>
+			  
+			  <p>Now, open the my-app.html file and include the following code in it.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;!doctype html>  
+		&lt;html>  
+		   &lt;link rel = 'import' href = 'bower_components/polymer/polymer.html'>  
+		   &lt;link rel = 'import' href = 'bower_components/paper-badge/paper-badge.html'>  
+		   &lt;link rel = 'import' href = 'bower_components/iron-iconset/iron-iconset.html'>  
+		   &lt;link rel = "import" href = "bower_components/iron-icons/iron-icons.html">  
+		   &lt;link rel = "import" href = "bower_components/iron-icons/social-icons.html">  
+		   &lt;link rel = "import" href = "bower_components/iron-icons/communication-icons.html">  
+  		 &lt;dom-module id = 'my-app'>  
+			  &lt;template>  
+				 &lt;div class = "container">  
+					&lt;span >Messages&lt;/span>  
+					&lt;paper-badge id = 'text' label = "4">&lt;/paper-badge>  
+				 &lt;/div>  
+		 &lt;div class = "container" >  
+					&lt;span id = 'text'>Thought &lt;/span>  
+					&lt;paper-badge id = 'text' icon = "social:mood" label = "happy">&lt;/paper-badge>  
+				 &lt;/div>  
+		 	&lt;style is = "custom-style">  
+					.container {  
+					   display: inline-block;  
+					   margin-left: 30px;  
+					   margin-right: 30px;  
+					   padding-top: 30px;  
+					}  
+					/* Need to position the badge to look like a text superscript */  
+					.container > paper-badge {  
+					   --paper-badge-margin-left: 20px;  
+					   --paper-badge-margin-bottom: 0px;  
+					}  
+					#text {  
+					   padding-top: 55px;  
+					}  
+				 &lt;/style>  
+			  &lt;/template>  
+	 		 &lt;script>  
+				 Polymer ({  
+					is: 'my-app',  
+					ready: function() {  
+					   this.async(function() {  
+					   });  
+					}  
+				 });  
+			  &lt;/script>  
+		   &lt;/dom-module>  
+		&lt;/html>  
+	</code>
+</pre>
+			  
+			  <p><strong>Output:</strong></p>
+              <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/paper-badge2.png" alt="paper badge 2">
+			  
+			  
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

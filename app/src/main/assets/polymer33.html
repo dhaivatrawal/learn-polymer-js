@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Polymer Google Analytics Query</h1>
+              <p>Google Analytics is an element of Google Web components which is used to query the Google Analytics Core Reporting API.</p>
+              <p>Run the following command to install google-analytics element in your   project directory. After that you can use this element in your   application:</p>
+			  
+			<div class="card-body  p-1   "style="background-color: black" >				
+			  <pre class="text-light mt-2">bower install --save GoogleWebComponents/google-analytics  </pre>
+			</div>
+			  
+			  <h3>Example</h3>
+              <p>Create an index.html file and add the following code in it to see the usage of google-analytics element in Polymer.js.</p>
+			  
+			  	
+<pre class="line-numbers">
+	<code class="language-js">
+		    &lt;!doctype html>  
+			&lt;html>  
+			&lt;head>  
+			&lt;title>Polymer Example&lt;/title>  
+			&lt;script src = "bower_components/webcomponentsjs/webcomponents-lite.js">&lt;/script>  
+			&lt;link rel = "import" href = "bower_components/polymer/polymer.html">  
+			&lt;link rel = "import" href = "bower_components/paper-styles/demo-pages.html">  
+			&lt;link rel = "import" href = "bower_components/google-signin/google-signin.html">  
+			&lt;link rel = "import" href = "bower_components/google-analytics/google-analytics.html">  
+
+			&lt;style>  
+			google-analytics-dashboard {  
+			display: block;  
+			padding: 2em;  
+			transition: opacity .2s ease;  
+					 }  
+			google-analytics-dashboard:not([authorized]) {  
+			opacity: .3;  
+			pointer-events: none;  
+					 }  
+			google-analytics-chart {  
+			box-shadow: 0 0 .5em rgba(0,0,0,.1);  
+			background: #fff;  
+			float: left;  
+			margin: 0 2em 2em 0;  
+			padding: 2em 2em 1em;  
+			transition: opacity .2s ease;  
+			max-width: 100%;  
+					 }  
+			google-analytics-view-selector, google-analytics-date-selector {  
+			box-shadow: 0 0 .5em rgba(0,0,0,.1);  
+			background: #fff;  
+			display: -webkit-flex;  
+			display: -ms-flexbox;  
+			display: flex;  
+						-webkit-flex-direction: column;  
+						-ms-flex-direction: column;  
+			flex-direction: column;  
+			margin: 0 0 2em 0;  
+			max-width: 600px;  
+			padding: 2em .5em 1em 2em;  
+					 }  
+			google-analytics-date-selector {  
+			max-width: 500px;  
+					 }  
+			google-analytics-view-selector {  
+			max-width: 750px;  
+					 }  
+			:root {  
+						--google-analytics-control: {  
+			display: block;  
+						   -webkit-flex: 1 1 0%;  
+						   -ms-flex: 1 1 0%;  
+			flex: 1 1 0%;  
+			margin: 0 1.5em 1em 0;  
+			min-width: 0;  
+						};  
+						--google-analytics-label: {  
+			display: block;  
+			font-weight: bold;  
+			padding: 0 0 .4em 2px;  
+						};  
+						--google-analytics-field: {  
+			border: 1px solid #ccc;  
+			border-radius: 4px;  
+			box-sizing: border-box;  
+			height: 34px;  
+			line-height: 20px;  
+			padding: 6px 12px;  
+			transition: border-color .2s;  
+			width: 100%;  
+						};  
+						--google-analytics-field-focus: {  
+			border-color: #4d90fe;  
+			outline: 0;  
+						};  
+					 }  
+			google-analytics-view-selector {  
+						--google-analytics-view-selector-control:  
+			var(--google-analytics-control);  
+
+						--google-analytics-view-selector-label:  
+			var(--google-analytics-label);  
+
+						--google-analytics-view-selector-select:  
+			var(--google-analytics-field);  
+
+						--google-analytics-view-selector-select-focus:  
+			var(--google-analytics-field-focus);  
+					 }  
+			google-analytics-date-selector {  
+						--google-analytics-date-selector-control:  
+			var(--google-analytics-control);  
+
+						--google-analytics-date-selector-label:  
+			var(--google-analytics-label);  
+
+						--google-analytics-date-selector-input:  
+			var(--google-analytics-field);  
+
+						--google-analytics-date-selector-input-focus:  
+			var(--google-analytics-field-focus);  
+					 }  
+			&lt;/style>  
+			&lt;/head>  
+
+			&lt;body>  
+			&lt;h2>Google Analytics Example&lt;/h2>  
+			&lt;google-signin>&lt;/google-signin>  
+
+			&lt;google-analytics-dashboard>  
+			&lt;google-analytics-view-selector>&lt;/google-analytics-view-selector>  
+			&lt;google-analytics-date-selector>&lt;/google-analytics-date-selector>  
+
+			&lt;google-analytics-chart  
+			type = "pie"  
+			metrics = "ga:pageviews"  
+			dimensions = "ga:browser"  
+			sort = "-ga:pageviews"  
+			max-results = "5">  
+			&lt;h3>Pageviews by Browser&lt;/h3>  
+			&lt;/google-analytics-chart>  
+			&lt;/google-analytics-dashboard>  
+			&lt;/body>  
+			&lt;/html>  
+		
+	</code>
+</pre>
+			  
+			  <p><strong>Output:</strong></p>
+			  <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/google-analytics.png" alt="google analytics">
+	
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

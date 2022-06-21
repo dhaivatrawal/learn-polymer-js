@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Google Signin</h1>
+              <p>The Polymer Google signin element is used for Google authentication to interact with drive and Google+ APIs.</p>
+			  
+<div class="card-body  p-1   "style="background-color: green" >				
+  <pre class="text-light mt-2">Note: You have to enable the APIs in Google Developers Console before using them.</pre>
+</div>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&LT;google-signin client-id = "Your client id"  
+		   scopes = "https://www.googleapis.com/auth/drive">&LT;/google-signin>  
+		&LT;google-signin label-signin = "Sign-in" client-id = "Your client id"  
+		   scopes = "https://www.googleapis.com/auth/drive">&LT;/google-signin>  
+		&LT;google-signin theme = "dark" width = "iconOnly" client-id = "Your client id"  
+		   scopes = "https://www.googleapis.com/auth/drive">&LT;/google-signin>  
+		
+	</code>
+</pre>
+		    <h3>Parameter Explanation:</h3>
+              <p><strong>clientId:</strong> clientId can be obtained from the Google   Developers Console.   https://console.developers.google.com/cloud-resource-manager?previousPage=%2F</p>
+              <p><strong>scopes:</strong> It is used to define the necessary scope permissions.</p>
+              <p><strong>requestVisibleActions:</strong> This attribute is used to write app activities (https://developers.google.com/+/web/app-activities/)on user's behalf.</p>
+              <p><strong>offline:</strong> This attribute is used to obtain an auth   code for your server to save for an offline access token   (https://developers.google.com/identity/sign-in/web/server-side-flow).</p>
+              <p>You can use the attributes like height, width and theme to style the   button by which you can follow the Google+ Sign-In button branding   guidelines (https://developers.google.com/+/branding-guidelines).</p>
+              <h2>Polymer Google Signin Events</h2>
+              <p><strong>google-signin-success:</strong> The signin-success event is   triggered when a user is authenticated successfully. You can notice the   authentication state of a user by using the isAuthorized attribute.</p>
+              <p><strong>google-signed-out:</strong> The signed-out event is triggered when a user signs out.</p>
+              <p><strong>google-signout-attempted:</strong> The signout-attempted event is triggered when a user attempts to sign out.</p>
+              <p><strong>google-signin-offline-success:</strong> The signin-offline-success event is triggered when a user attempts to sign out.</p>
+              <p><strong>google-signin-necessary:</strong> The signin-necessary event   is triggered when the scope needs additional user permissions that are   requested via google-signin-aware elements.</p>
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

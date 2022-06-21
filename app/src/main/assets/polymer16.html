@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Polymer iron-icon</h1>
+              <p>The Polymer iron-icon element is used to display a single icon. Its default icon size is 24 px. </p>
+              <p>It is displayed as:</p>
+			  
+<pre class="line-numbers">
+ 	<code class="language-js">
+ 		&lt;iron-icon src = "icon.png">&lt;/iron-icon>
+ 	</code>
+</pre>
+			  
+		    <p>The following code shows how to set the size of an icon.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;iron-icon class = "big" src = "big_icon.png">&lt;/iron-icon>  
+		&lt;style is = "custom-style">  
+		   .big {  
+			  --iron-icon-height: 20px;  
+			  --iron-icon-width: 20px;  
+		   }  
+		&lt;/style> 
+	</code>
+</pre>
+			  
+		    There are various set of icons in the iron elements. You have to import   the iron-icons.html file in your index file for default set of icons and   use the icon attribute as shown in the following command to define an   icon.
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;link rel = "import" href = "/components/iron-icons/iron-icons.html">  
+		&lt;iron-icon icon = "android">&lt;/iron-icon> 
+	</code>
+</pre>
+			  
+		    <p>We can also use different built-in set of icons by importing   iron-icons/&lt;iconset&gt;icons.html file and define the icon as   &lt;iconset&gt;:&lt;icon&gt;. </p>
+             <p><strong>Example:</strong> Code for a communication icon</p>
+			  
+<pre class="line-numbers">
+    <code class="language-js">
+		&lt;link rel = "import" href = "/components/iron-icons/communication-icons.html">  
+		&lt;iron-icon icon = "communication:email">&lt;/iron-icon>  
+    </code>
+</pre>	
+			  
+		    <p>We can also create custom item and use it:</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js"><p>&lt;iron-icon icon = "fruit:berry">&lt;/iron-icon></p> </code>
+</pre>	
+			  
+		    <p>Let's see the custom properties used for styling: </p>
+              <p><strong>Table:</strong></p>
+            <table class="table-responsive table-striped">
+                <tbody class="table">
+                  <tr>
+                    <th>Index</th>
+                    <th>Custom Properties</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>1)</td>
+                    <td>--iron-icon</td>
+                    <td>It is a mixin which is applied to an icon. Its default value is {}</td>
+                  </tr>
+                  <tr>
+                    <td>2)</td>
+                    <td>--iron-icon-width</td>
+                    <td>It specifies the width of an icon. Its default value is 24px.</td>
+                  </tr>
+                  <tr>
+                    <td>3)</td>
+                    <td>--iron-icon-height</td>
+                    <td>It specifies the height of an icon. Its default value is 24px.</td>
+                  </tr>
+                  <tr>
+                    <td>4)</td>
+                    <td>--iron-icon-fill-color</td>
+                    <td>Property for filling the color of SVG icon. Its default value is currentcolor.</td>
+                  </tr>
+                  <tr>
+                    <td>5)</td>
+                    <td>--iron-icon-stroke-color</td>
+                    <td>Property for filling the stroke color of SVG icon.</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3>Example</h3>
+              <p>To use the iron-icon element, navigate to your project folder in the command prompt and use the following command -</p>
+			  
+			<div class="card-body  p-1   " style="background-color: black">				
+			  <pre class="text-light mt-2">bower install PolymerElements/iron-icon -save  </pre>
+	  		</div>
+			  
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/iron-iconexample1.png" alt="iron icon example 1"></pre>
+		    
+              <p>The following example demonstrates the use of iron-icon element:</p>
+			  
+			  			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;!DOCTYPE html>  
+			&lt;html>  
+			   &lt;head>  
+				  &lt;title>iron-icon&lt;/title>  
+		&lt;base href = "https://user-content-dot-custom-elements.appspot.com/PolymerElements/iron-icon/v1.0.13/iron-icon/">  
+			  &lt;script src = "../webcomponentsjs/webcomponents-lite.js">&lt;/script>  
+			  &lt;link rel = "import" href = "../iron-icons/iron-icons.html">  
+			  &lt;link rel = "import" href = "iron-icon.html">  
+		   &lt;/head>  
+   		   &lt;body>  
+			  &lt;h2>Iron-Icon Example&lt;/h2>  
+			  &lt;iron-icon icon = "android">&lt;/iron-icon>  
+		   &lt;/body>  
+	   &lt;/html>  			
+	</code>
+</pre>
+			  
+			  <p><strong>Output:</strong></p>
+              <img  class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/iron-iconexample2.png" alt="iron icon example 2">
+			  
+			  
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

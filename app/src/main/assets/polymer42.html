@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Polymer Gold CC CVC Input</h1>
+              <p>The polymer gold-cc-cvc input is a material design styled single line   input which is used to verify the credit card while you enter the code.</p>
+              <p><strong>Syntax:</strong></p>
+			  
+	<pre class="line-numbers">
+		<code class="language-js">
+		     &lt;gold-cc-cvc-input label = "cvc">&lt;/gold-cc-cvc-input>  		
+		</code>
+	</pre>
+			  
+		    <p>Here CVC is a default label which is optional. </p>
+              <p>You can also use &lt;gold-cc-input&gt; along with &lt;gold-cc-cvc-input&gt; by binding the property cardType.</p>
+			  
+	<pre class="line-numbers">
+		<code class="language-js">
+		    &lt;gold-cc-input card-type = "{{cardType}}">&lt;/gold-cc-input>  
+			&lt;gold-cc-cvc-input card-type = "[[cardType]]">&lt;/gold-cc-cvc-input> 		
+		</code>
+	</pre>	
+			  
+		    <h2>Validation</h2>
+              <p>The CVC input accepts 3 digit long code for most of the valid cards,   but for valid american express CVC is considered to be 4 digits.</p>
+              <p>You can manually validate it by using <strong>validate()</strong> method that returns true if it is valid or otherwise false, if it is not   valid. You can use auto-validate and required attributes to make the   input to be automatically validated.</p>
+              <h3>Example</h3>
+            <p>Run the following command to install gold-cc-cvc-input element in   your project directory. After that you can use this element in your   application: </p>
+			  
+			
+<div class="card-body  p-1   "style="background-color: black" >				
+  <pre class="text-light mt-2">bower install PolymerElements/gold-cc-cvc-input -save  </pre>
+</div>
+			  
+			   <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/gold-cc-cvc.png" alt="gold cc cvc"></pre>
+		    
+              <p>It will install all the related elements of polymer_ gold-cc-cvc-input under the bower_components folder.</p>
+              <p>Create an index.html file and add the following code in it to see the usage of gold-cc-cvc-input element in Polymer.js.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;!DOCTYPE html>  
+		&lt;html>  
+		   &lt;head>  
+			  &lt;title>Gold CC CVC Input&lt;/title>  
+			  &lt;meta charset = "utf-8">  
+			  &lt;script src = "bower_components/webcomponentsjs/webcomponents-lite.min.js">&lt;/script>  
+			  &lt;link rel = "import" href = "bower_components/polymer/polymer.html">  
+			  &lt;link rel = "import"   
+				 href = "bower_components/gold-cc-cvc-input/gold-cc-cvc-input.html">  
+		   &lt;/head>  
+	   &lt;body>  
+			  &lt;h3>Pre-validated cvc&lt;/h3>  
+			  &lt;gold-cc-cvc-input  
+				 label = "valid cvc"  
+				 value = "586"  
+				 auto-validate    
+				 style = "width:30%; display:inline-block;">  
+			  &lt;/gold-cc-cvc-input>&lt;br/>  
+		  &lt;gold-cc-cvc-input  
+				 label = "invalid cvc"  
+				 value = "55"  
+				 auto-validate    
+				 style = "width:30%; display:inline-block;">  
+			  &lt;/gold-cc-cvc-input>      
+		  &lt;h3>Displays custom error message&lt;/h3>  
+			  &lt;gold-cc-cvc-input   
+				 label = "Enter a cvc"   
+				 auto-validate   
+				 error-message = "Please enter a valid cvc"   
+				 style = "width:30%; display:inline-block;">  
+			  &lt;/gold-cc-cvc-input>  
+		   &lt;/body>  
+		&lt;/html>  
+	</code>
+</pre>
+			  <p><strong>Output:</strong></p>
+			  <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/gold-cc-cvc2.png" alt="gold cc cvc">
+			  
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

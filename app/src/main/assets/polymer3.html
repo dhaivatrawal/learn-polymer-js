@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	<link href="css/prism.css" rel="stylesheet" />  
+	  
+
+    <title>PolymerJS</title>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+  <div class="col-12">	
+	  <br>
+    <h1>Polymer Installation</h1>
+     <p>
+      It's easy to configure Polymer in your system. Following are the two ways to install Polymer.</p>
+             <ul>
+               <li>The Polymer CLI (Command Line Interface)</li>
+               <li>The Bower</li>
+             </ul>
+             <h2>Installing Polymer Using Polymer CLI</h2>
+             <p><strong>Step 1</strong> − Install Polymer using the following npm command.</p>
+	  			
+	  		<div class="card-body  p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">npm install -g polymer-cli@next  </pre>
+	  		</div>
+            
+             <p><strong>Step 2</strong> − Check the successful installation and version using the following command.</p>
+            
+	  
+	  		<div class="card-body  p-1   " style="background-color: black">				
+				 <pre class="text-light mt-2">polymer --version </pre>
+	  		</div>
+	  
+             <p>If it has installed successfully, then it will show the version as −</p>
+             <p><strong>Step 3</strong> − Create a directory with the name of your choice and switch to that directory.</p>
+             
+	  
+	  	   <div class="card-body p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">mkdir polymer-js   cd polymer-js </pre>
+	  		</div>
+	  
+	  
+             <p><strong>Step 4</strong> − To initialize your project, run the following command in your <em>polymer-jsdirectory</em>.</p>
+            
+	  
+	        <div class="card-body  p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">polymer init  </pre>
+	  		</div>
+	  
+	  
+             <p>After executing the above command, it will show something like this −</p>
+	  
+	        <div class="card-body  p-1   " style="background-color: black"><pre class="text-light mt-2">  
+	                C:\polymer-js>polymer init 
+			? Which starter template would you like to use? 
+			1) polymer-1-element - A simple Polymer 1.0 element template 
+			2) polymer-2-element - A simple Polymer 2.0 element template 
+			3) polymer-1-application - A simple Polymer 1.0 application template 
+			4) polymer-2-application - A simple Polymer 2.0 application 
+			5) polymer-1-starter-kit - A Polymer 1.x starter application template, with navigation and "PRPL pattern" loading 
+			6) polymer-2-starter-kit - A Polymer 2.x starter application template, with navigation and "PRPL pattern" loading 
+			7) shop - The "Shop" Progressive Web App demo
+			Answer: 4 
+
+			    </pre>
+	  		</div>
+	  
+	  
+             <p><strong>Step 5</strong> − Select the polymer-2-application from the above given options.</p>
+             <p>Now, start your project using the following command.</p>
+            
+	  
+	       <div class="card-body  p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">polymer serve </pre>
+	  		</div>
+	  
+	  
+             <h2>Installing Polymer Using Bower</h2>
+             <p><strong>Step 1</strong> − To start from scratch using Bower method, install the Bower using the following command.</p>
+             
+	  
+	        <div class="card-body  p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">npm install -g bower </pre>
+	  		</div>
+	  
+	  
+             <p><strong>Step 2</strong> − Install the Polymer using the following command.</p>
+             
+	  
+	       <div class="card-body  p-1   "  style="background-color: black" >				
+				 <pre class="text-light mt-2">npm install -g polymer-cli@next  </pre>
+	  		</div>
+	  
+	  
+             <p><strong>Step 3</strong> − Check the successful installation and version of Polymer, using the following command.</p>
+           
+	  
+	    <div class="card-body  p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">polymer --version  </pre>
+	  		</div>
+	  
+             <p>If it has installed successfully, then it will show the version as −</p>
+            
+	  
+	  <div class="card-body  p-1    "style="background-color: black" >				
+				 <pre class="text-light mt-2">0.18.0-pre.13.  </pre>
+	  		</div>
+	  
+	  
+             <p><strong>Step 4</strong> − To install the latest Polymer 2.0 RC release from bower, use the following command.</p>
+             
+	  
+	  <div class="card-body  p-1   " style="background-color: black">				
+				 <pre class="text-light mt-2">bower install Polymer/polymer#^2.0.0-rc.3 </pre>
+	  		</div>
+	  
+	  
+             <p><strong>Step 5</strong> − Create a <strong>index.html</strong> file and add the following code in the &lt;head&gt; tag.</p>
+            				
+				 <pre class="line-numbers "  ><code class="language-js"> 				 
+				 &lt;script src = "/bower_components/webcomponentsjs/webcomponentsloader.js"></script> 
+				// it loads the polyfills 
+
+				&lt;link rel = "import" href = "/bower_components/polymer/polymer.html"> 
+				// it import Polymer </code>
+				 </pre>	  
+	  
+             <p><strong>Step 6</strong> − Start your project using the following command.</p>
+             
+	  
+	    <div class="card-body  p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">polymer serve  </pre>
+	  		</div>
+	  
+	  
+             <h2>Building for Deployment</h2>
+             <p>To build your project for deployment, <strong>polymer build</strong> command is an easier way, which will minify, compile, or bundle your code depending on the command line flags.</p>
+             <p>To create a universal build that works on all browsers, use the following command.</p>
+            
+	  
+	  <div class="card-body p-1   " style="background-color: black">				
+				 <pre class="text-light mt-2">polymer build --js-compile </pre>
+	  		</div>
+	  
+	  
+             <p>The above command will build the project to build/default and you can start this directory, using the following command.</p>
+            	  
+	  
+	   <div class="card-body  p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">polymer serve build/default  </pre>
+	  		</div>
+	  
+             <p>Polymer 2.0 uses ES6 and HTML Custom Elements. For best practice, it   is always good to use ES6 to browsers with full ES6 support and compile   ES5 to old browsers that don't support ES6. The following table shows   the best strategy for your project.</p>
+             <table class="table-responsive table-striped">
+               <tbody class="table">
+                 <tr>
+                   <th>Strategy</th>
+                   <th>Easiest for cross-browser support</th>
+                   <th>Most optimal for WC v1 performance</th>
+                 </tr>
+                 <tr>
+                   <td>Server</td>
+                   <td>Any server works, including static ones</td>
+                   <td>Differential serving required</td>
+                 </tr>
+                 <tr>
+                   <td>Deployed Code</td>
+                   <td>ES5 transpiled</td>
+                   <td>ES6</td>
+                 </tr>
+                 <tr>
+                   <td>Polyfill Loader</td>
+                   <td>webcomponents-es5-loader.js</td>
+                   <td>webcomponents-loader.js</td>
+                 </tr>
+               </tbody>
+             </table>
+             <p></p>
+		  
+	  
+    </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/prism.js"></script>		  
+		  
+ 
+  </body>
+</html>

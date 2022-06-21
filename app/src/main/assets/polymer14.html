@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Iron Flex Layout</h1>
+              <p>The &lt;iron-flex-layout&gt; element is used to provide CSS flexible box layout. It is also known as flexbox.</p>
+              <p>You can use flexbox in two different ways: </p>
+              <ul>
+                <li><strong>Layout classes:</strong> The layout class is a stylesheet   which provides certain rules of class-based flexbox where the layout   properties are directly defined in the markup.</li>
+                <li><strong>Custom CSS mixins:</strong> It is a stylesheet which contains custom CSS mixins, which can be applied inside a CSS rule with the help of @apply function.</li>
+              </ul>
+            <h3>Example</h3>
+			  
+		    Open command prompt and go to your project folder to implement iron-flex-layout element by using the following command: 
+			  
+			<div class="card-body  p-1   " style="background-color: black">				
+				 <pre class="text-light mt-2">bower install PolymerElements/iron-flex-layout -save  </pre>
+	  		</div>
+			  <br>
+			  
+		    <pre><img src="https://static.javatpoint.com/polymerjs/images/iron-flexlayout.png" alt="iron flex layout"></pre>
+              
+              <p>Now, you can import the iron-flex-layout file in your index.html using the following command:</p>
+			  
+			  <pre class="line-numbers"><code class="language-html">&lt;link rel = "import" href = "/bower_components/iron-flex-layout/iron-flex-layout.html">  </code></pre>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 &lt;!DOCTYPE html>  
+		  &lt;html>  
+				   &lt;head>  
+					  &lt;title>iron-flex-layout&lt;/title>  
+					  &lt;meta name = "viewport" content = "width = device-width, initial-scale = 1">  
+					  &lt;script src = "bower_components/webcomponentsjs/webcomponents-lite.min.js">&lt;/script>  
+					  &lt;link rel = "import"  
+						 href = "bower_components/iron-flex-layout/classes/iron-flex-layout.html">  
+			 		 &lt;style>  
+						 body {  
+							font-weight: 300;  
+						 }  
+						 div {  
+							border: 2px solid DarkCyan ;  
+							background-color: white;  
+						 }  
+						 .layout {  
+							margin-bottom: 25px;  
+									background-color: DarkCyan ;  
+						 }  
+						 p {  
+							margin: 10px;  
+						 }  
+					  &lt;/style>  
+				   &lt;/head>  
+		   &lt;body>  
+					  &lt;h2>Iron-Flex-Layout&lt;/h2>  
+					  &lt;div class = "horizontal layout">  
+						 &lt;div>&lt;p>Delta&lt;/p>&lt;/div>  
+						 &lt;div>&lt;p>Epsilon (flex)&lt;/p>&lt;/div>  
+						 &lt;div>&lt;p>Zeta&lt;/p>&lt;/div>  
+					  &lt;/div>  
+			&lt;/body>  
+		&lt;/html>  
+	</code>
+</pre>
+			  
+			  <p><strong>Output:</strong></p>
+              <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/iron-flexlayout2.png" alt="iron flex layout 2">  
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

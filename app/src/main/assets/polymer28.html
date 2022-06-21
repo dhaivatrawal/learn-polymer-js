@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Polymer Paper Listbox</h1>
+              <p>In Polymer.js, paper-listbox is an easy-going listbox control which   is combined with styling. It shows the selected items in bold text. It   provides you multiple selection options and key bindings to navigate   through the listbox. </p>
+              <p>Use the following command in your command prompt to get paper-listbox in your directory in working condition.</p>
+			  
+		    <div class="card-body  p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">bower install --save PolymerElements/paper-listbox</pre>
+	  		</div>
+			  
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/paper-listbox.png" alt="paper listbox"></pre>
+		    
+              <h3>Example</h3>
+              <p>Create an index.html file and add the following code in it to see the use of paper listbox element in Polymer.js.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;!doctype html>  
+		&lt;html>  
+		   &lt;head>  
+			  &lt;link rel = 'import' href = 'my-app.html'>  
+		   &lt;/head>     
+		   &lt;body>      
+			  &lt;my-app>&lt;/my-app>  
+		   &lt;/body>  
+		&lt;/html>  
+		
+	</code>
+</pre>
+			  
+			  <p>Now, open my-app.html file and include the following code in it.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		     &lt;link rel = 'import' href = 'bower_components/polymer/polymer.html'>  
+		&lt;link rel = "import" href = "bower_components/paper-listbox/paper-listbox.html">  
+		&lt;link rel = "import" href = "bower_components/paper-item/paper-item.html">  
+		&lt;dom-module id = 'my-app'>  
+		   &lt;template>  
+			  &lt;style>  
+				 paper-listbox {  
+					width: 200px;  
+					border: 1px dotted #ccc;  
+				 }  
+				 paper-item {  
+					cursor: pointer;  
+				 }  
+			  &lt;/style>        
+			  &lt;h3>Paper-Listbox Example &lt;/h3>  
+			  &lt;paper-listbox multi>   
+				 &lt;paper-item>AngularJS Tutorial&lt;/paper-item>  
+				 &lt;paper-item disabled>C++ Tutorial&lt;/paper-item>  
+				 &lt;paper-item>C Tutorial&lt;/paper-item>  
+				 &lt;paper-item>Android Tutorial&lt;/paper-item>  
+			  &lt;/paper-listbox>  
+		   &lt;/template>   
+		   &lt;script>  
+			  Polymer ({  
+				 is: 'my-app', ready: function() {  
+					this.async(function() {           
+					});  
+				 }  
+			  });  
+		   &lt;/script>  
+		&lt;/dom-module>  
+		
+		</code>
+	</pre>
+			  
+		<p><strong>Output:</strong></p>
+		<img  class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/paper-listbox1.png" alt="paper listbox 1">
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

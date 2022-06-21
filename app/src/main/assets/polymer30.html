@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Polymer Paper Dropdown Menu</h1>
+              <p>The Polymer paper-dropdown menu is a simple dropdown menu, which is   used to work with selectable content. Use the following commands to   install this element in your project directory and use in your   application. </p>
+			  
+		  	<div class="card-body  p-1   "style="background-color: black" >				
+			  <pre class="text-light mt-2">bower install --save PolymerElements/paper-dropdown-menu  </pre>
+  </div>
+			  <br>
+			  
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/paper-dropdown1.png" alt="paper dropdown 1"></pre>
+			  
+			  	<div class="card-body  p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">bower install --save PolymerElements/paper-item  </pre>
+				</div>
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/paper-dropdown2.png" alt="paper dropdown 2"></pre>
+			  
+			  	<div class="card-body  p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">bower install --save PolymerElements/paper-listbox </pre>
+				</div>
+			  <br>
+			  
+		    <pre><img src="https://static.javatpoint.com/polymerjs/images/paper-dropdown3.png" alt="paper dropdown 3"></pre>	  
+
+              <h3>Example </h3>
+              <p>Create an index.html file and add the following code in it to see the use of paper-dropdown-menu element in Polymer.js. </p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;!doctype html>  
+		&lt;html>  
+		    &lt;head>  
+			  &lt;link rel = 'import' href = 'my-app.html'>  
+		    &lt;/head>  
+		    &lt;body>      
+			  &lt;my-app>	&lt;/my-app>  
+			&lt;/body>  
+		&lt;/html>  
+		
+	</code>
+</pre>
+			  
+			  <p>Now, open the my-app.html file and include the following code in it. </p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;link rel = 'import' href='bower_components/polymer/polymer.html'>  
+		&lt;link rel = "import" href = "bower_components/paper-dropdown-menu/paper-dropdown-menu.html">  
+		&lt;link rel = "import" href = "bower_components/paper-item/paper-item.html">  
+		&lt;link rel = "import" href = "bower_components/paper-listbox/paper-listbox.html">  
+		&lt;dom-module id = 'my-app'>  
+		   &lt;template>  
+			  &lt;style is = "custom-style">  
+				 paper-dropdown-menu {  
+					width:250px;  
+				 }  
+				 paper-dropdown-menu {  
+					height: 200px;  
+					display: block;  
+				 }  
+			  &lt;/style>  
+		  	&lt;h3>Paper-Dropdown-Menu Example &lt;/h3>  
+			  &lt;paper-dropdown-menu>  
+				 &lt;paper-listbox class = "dropdown-content" selected = "1">  
+					&lt;paper-item>Java Tutorial&lt;/paper-item>  
+					&lt;paper-item>C Tutorial&lt;/paper-item>  
+					&lt;paper-item>PHP Tutorial&lt;/paper-item>  
+					&lt;paper-item>C++ Tutorial&lt;/paper-item>  
+				 &lt;/paper-listbox>  
+			  &lt;/paper-dropdown-menu>  
+		   &lt;/template>  
+	   		&lt;script>  
+			  Polymer ({  
+				 is: 'my-app', ready: function() {  
+					this.async(function() {           
+					});  
+				 }  
+			  });  
+		   &lt;/script>  
+		&lt;/dom-module>  
+	</code>
+</pre>
+			  
+			  <p>Output :</p>
+			  <img  class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/paper-dropdown4.png" alt="paper dropdown 4">
+			  
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

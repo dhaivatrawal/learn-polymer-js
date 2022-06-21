@@ -1,0 +1,300 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Events</h1>
+              <p>Polymer events are used by Polymer elements to communicate with state   changes of DOM tree to parent elements. Polymer uses the standard DOM   APIs for creating, dispatching, and listening for events. </p>
+              <p>Polymer uses annotated event listeners and defines them as small   chunks of DOM template. They can be added to DOM children using onevent   annotations in the template. </p>
+              <h2>Add Event Listener</h2>
+              <p>There are two ways to add event listener: </p>
+              <p>Event listener can be added to host element by providing a listeners object that maps events to event handler function names. </p>
+              <p>Event listener can also be added to any element in the <strong>this.$</strong> collection using the syntax</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		
+		nodeId.eventName. 
+		
+	</code>
+</pre>
+			    
+		    <h3>Example</h3>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		
+	&lt;dom-module id="x-custom">  
+      &lt;template>  
+        &lt;div>I will respond&lt;/div>  
+        &lt;div>to a tap on&lt;/div>  
+        &lt;div>any of my children!&lt;/div>  
+        &lt;div id="special">I am special!&lt;/div>  
+      &lt;/template>  
+      &lt;script>  
+        Polymer({  
+          is: 'x-custom',  
+          listeners: {  
+            'tap': 'regularTap',  
+            'special.tap': 'specialTap'  
+          },  
+          regularTap: function(e) {  
+            alert("Thank you for tapping");  
+          },  
+          specialTap: function(e) {  
+            alert("It was special tapping");  
+          }  
+        });  
+      &lt;/script>  
+    &lt;/dom-module>  
+		
+	</code>
+</pre>		
+			  
+		    <h2>Add Annotated Event Listener</h2>
+              <p>You can add event listeners to local DOM children by using on-event   annotations in your template. By using this method, you don't need to   give an element an id to bind an event listener. </p>
+              <h3>Example</h3>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+	&lt;dom-module id="x-custom">  
+      &lt;template>  
+        &lt;button on-tap="handleTap">Kick Me&lt;/button>  
+      &lt;/template>  
+      &lt;script>  
+        Polymer({  
+          is: 'x-custom',  
+          handleTap: function() {  
+            alert('Ow!');  
+          }  
+        });  
+      &lt;/script>  
+    &lt;/dom-module>  
+	</code>
+</pre>
+			  
+		    <h2>Add and Remove Listener</h2>
+              <p>listen() and unlisten() methods are used to imperatively add and remove listeners.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+this.listen(this.$.myButton, 'tap', 'onTap');  
+this.unlisten(this.$.myButton, 'tap', 'onTap');
+		
+	</code>
+</pre>
+			  
+		    <p>If listeners object or annotated event listeners are used, Polymer automatically adds and removes the event listeners.</p>
+			  
+		    <h2>Custom Events</h2>
+              <p>You can trigger or fire a custom event by using the standard   CustomEvent constructor and the dispatchEvent () method from the host   element.</p>
+              <p>Let's take an example to trigger a custom event from the host   element. Create a file name index.html and use the following code in it.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+&lt;!doctype html>  
+    &lt;html>  
+       &lt;head>  
+          &lt;title>Polymer Example&lt;/title>  
+          &lt;script src = "bower_components/webcomponentsjs/webcomponents-lite.js">&lt;/script>  
+          &lt;link rel = "import" href = "bower_components/polymer/polymer.html">  
+          &lt;link rel = "import" href = "custom-event.html">  
+       &lt;/head>    
+       &lt;body>  
+          &lt;custom-event>&lt;/custom-event>  
+          &lt;script>  
+             document.querySelector('custom-event').addEventListener('customValue', function (e) {  
+                console.log(e.detail.customval); // true  
+             })  
+          &lt;/script>  
+&lt;/body>  
+&lt;/html>  
+		
+	</code>
+</pre>		
+			  
+			  <p>Now, create another file named custom-event.html and use the following code within it.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+&lt;link rel = "import" href = "bower_components/polymer/polymer-element.html">  
+    //it specifies the start of an element's local DOM  
+    &lt;dom-module id = "custom-event">  
+       &lt;template>  
+          &lt;h2>Custom Event Example&lt;/h2>  
+          &lt;button on-click = "myClick">Click Here&lt;/button>  
+       &lt;/template>  
+         
+       &lt;script>  
+          Polymer ({  
+             is: "custom-event", myClick(e) {  
+                this.dispatchEvent(new CustomEvent('customValue', {detail: {customval: true}}));  
+             }  
+          });  
+       &lt;/script>  
+    &lt;/dom-module>  
+	</code>
+</pre>
+			 
+	   <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/polymer-custom-event.png" alt="Polymer custom event">
+      <p>Now, after clicking on "Click Here" button, you can see the true value for the custom event.</p>
+      <img  class="img-fluid"src="https://static.javatpoint.com/polymerjs/images/polymer-custom-event1.jpg" alt="Polymer custom event 1">
+      <h2>Gesture Events</h2>
+      <p>Gesture events are used to make user interaction more pleasurable on both touch and mobile devices. <strong>For example:</strong> tap event is a part of gesture event which fires consistently on both mobile and desktop devices. </p>
+      <p>Following is a list of different supported gesture event types: </p>
+      <p><strong>Table:</strong></p>
+      <table class="table-responsive table-striped">
+        <tbody class="table">
+          <tr>
+            <th>Index</th>
+            <th>Event type</th>
+            <th>Description</th>
+            <th>Properties</th>
+          </tr>
+          <tr>
+            <td>1)</td>
+            <td>down</td>
+            <td>The down event type is used to specify that the finger/button has moved down.</td>
+            <td><strong>x:</strong> It provides the clientX coordinate for an event.<br>
+              <strong>y: </strong> It provides the clientY coordinate for an event.<br>
+              <strong>sourceEvent: </strong> It specifies the down action caused by DOM event.</td>
+          </tr>
+          <tr>
+            <td>2)</td>
+            <td>up</td>
+            <td> The up event type is used to specify that the finger/button has moved up.</td>
+            <td><strong>x: </strong> It provides the clientX coordinate for an event.<br>
+              <strong>y: </strong> It provides the clientY coordinate for an event.<br>
+              <strong>sourceEvent: </strong> It specifies the up action caused by DOM event.</td>
+          </tr>
+          <tr>
+            <td>3)</td>
+            <td>tap</td>
+            <td> The tap event type is used to specify the occurrence of up and down actions.</td>
+            <td><strong>x: </strong> It provides the clientX coordinate for an event.<br>
+              <strong>y: </strong> It provides the clientY coordinate for an event.<br>
+              <strong>sourceEvent: </strong> It is used to specify the tap action caused by DOM event.</td>
+          </tr>
+          <tr>
+            <td>4)</td>
+            <td>track</td>
+            <td>The track event type is used to track the movement while finger/button is down.</td>
+            <td><strong>x: </strong> It is used to provide the clientX coordinate for an event.<br>
+              <strong>y: </strong> It is used to provide the clientY coordinate for an event. <br>
+              <strong>state: </strong> It is a type string that specifies the tracking state. <br>
+              <strong>dx: </strong> It horizontally makes the changes in pixels, when you track the first event. <br>
+              <strong>dy: </strong> It vertically makes the changes in pixels, when you track the first event. <br>
+              <strong>ddx: </strong> It horizontally makes the changes in pixels, when you track the last event. <br>
+              <strong>ddy: </strong> It vertically makes the changes in pixels, when you track the last event. <br>
+              <strong>hover():</strong> It is used to determine the currently hovered element. </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3>Example</h3>
+      <p>Let's take an example to demonstrate the use of gesture event types   in the template. Create a file named index.html and use the following   code within it.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+&lt;!doctype html>  
+    &lt;html>  
+       &lt;head>  
+          &lt;title>Polymer Example&lt;/title>  
+          &lt;script src = "bower_components/webcomponentsjs/webcomponents-lite.js">&lt;/script>  
+          &lt;link rel = "import" href = "bower_components/polymer/polymer.html">  
+          &lt;link rel = "import" href = "gesture-event.html">  
+       &lt;/head>  
+       &lt;body>  
+          &lt;gesture-event>&lt;/gesture-event>  
+       &lt;/body>  
+    &lt;/html>  
+		
+	</code>
+</pre>
+			  
+			  <p>Create another file named gesture-event.html having the following code.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+    &lt;link rel = "import" href = "bower_components/polymer/polymer-element.html">  
+      
+    //it specifies the start of an element's local DOM  
+    &lt;dom-module id = "gesture-event">  
+       &lt;template>  
+          &lt;style>  
+             #box {  
+                width: 200px;  
+                height: 200px;  
+                background: pink;  
+             }  
+          &lt;/style>  
+            
+          &lt;h2>Gesture Event Types Example&lt;/h2>  
+          &lt;div id = "box" on-track = "myClick">{{track_message}}&lt;/div>  
+       &lt;/template>  
+         
+       &lt;script>  
+          Polymer ({  
+             is: 'gesture-event', myClick: function(e) {  
+                switch(e.detail.state) {  
+                   case 'start':  
+                   this.track_message = 'Tracking event started.';  
+                   break;  
+                   case 'track':  
+                      this.track_message = 'Tracking event is in progress. ' +  
+                      e.detail.x + ', ' + e.detail.y;  
+                   break;  
+                   case 'end':  
+                      this.track_message = 'Tracking event ended.';  
+                   break;  
+                }  
+             }  
+          });  
+       &lt;/script>  
+    &lt;/dom-module>  
+		
+	</code>
+</pre>
+			  
+<p><strong>Output:</strong></p>
+<p>Hover and drag the mouse in the element, it will show the progress of event tracking like this:</p>
+<img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/polymer-Gesture-event1.png" alt="Polymer Gesture event 1">
+<p>When you stop dragging the mouse, it will end the tracking event on the element like this:</p>
+<img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/polymer-Gesture-event2.png" alt="Polymer Gesture event 2">
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

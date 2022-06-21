@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css">
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+	    <div class="col-12">
+			<br>
+		
+            <h1>Polymer App Layout</h1>
+              <p>The app-layout elements are comprised of components such as toolbars,   drawers, and headers. These are used for building high-quality,   responsive layouts just with markup. Some of the elements are listed in   the following table.</p>
+              <p><strong>Table:</strong></p>
+          <table class="table-responsive table-striped">
+                <tbody class="table">
+                  <tr>
+                    <th>Index</th>
+                    <th>Elements</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>1)</td>
+                    <td>app-box</td>
+                    <td>This element works as container and has scroll effects, visual effects based on the scroll position.</td>
+                  </tr>
+                  <tr>
+                    <td>2)</td>
+                    <td>app-drawer</td>
+                    <td>This is a navigation drawer which will slide in and out from left or right.</td>
+                  </tr>
+                  <tr>
+                    <td>3)</td>
+                    <td>app-drawer-layout</td>
+                    <td>This will position the app-drawer and other content.</td>
+                  </tr>
+                  <tr>
+                    <td>4)</td>
+                    <td>app-grid</td>
+                    <td>This is used for creating responsive and fluid grid layouts using custom properties.</td>
+                  </tr>
+                  <tr>
+                    <td>5)</td>
+                    <td>app-header</td>
+                    <td>This element works at the top of the screen as a container   for app-toolbars and has scroll effects, visual effects based on the   scroll position.</td>
+                  </tr>
+                  <tr>
+                    <td>6)</td>
+                    <td>app-header-layout</td>
+                    <td>This element acts as a cover that positions the app-header and other content.</td>
+                  </tr>
+                  <tr>
+                    <td>7)</td>
+                    <td>app-scrollpos-control</td>
+                    <td>This element is used for saving and restoring the scroll position when multiple pages share the same document scroller.</td>
+                  </tr>
+                  <tr>
+                    <td>8)</td>
+                    <td>app-toolbar</td>
+                    <td>It is a horizontal toolbar which contains items that can be used for labeling, navigating, searching and other actions.</td>
+                  </tr>
+                </tbody>
+            </table>
+			  
+		  <h3>Example:</h3>
+              <p>Use the following command on command prompt to use app layout elements to move into the project directory.</p>
+          <div>
+                <div>
+                  <div>
+                    <div></div>
+                  </div>
+                 
+					  
+				  <div class="card-body p-1  " style="background-color: black" >				
+			     <pre class="text-light mt-2">bower install PolymerElements/app-layout --save</pre>
+	  				  </div>
+					
+                </div>
+          </div>
+			<br>
+			
+		  <pre > <img src="https://static.javatpoint.com/polymerjs/images/Applayout1.png" alt="Applayout 1"></pre>
+		 
+              <p>It will install the app-layout elements in bower-component folder.    Then, you can import the file using &lt;link&gt; tag in your   index.htmlfile. </p>
+			
+		  <div class="card-block bg-danger" >				
+ <pre class="line-numbers"  >
+ 	<code class="language-html"> 				 
+		&lt;link rel = "import" href = "/bower_components/app-layout/app-layout.html">  
+		&lt;base href = "https://user-content-dot-custom-elements.appspot.com/PolymerElements/app-layout/		/app-layout/">  
+		&lt;script src = "../webcomponentsjs/webcomponents-lite.min.js"></script>  
+		&lt;link rel = "import" href = "app-header/app-header.html">  
+		&lt;link rel = "import" href = "app-toolbar/app-toolbar.html">  
+		&lt;link rel = "import" href = "app-box/app-box.html">  
+		&lt;link rel = "import" href = "demo/sample-content.html">  
+		&lt;link rel = "import" href = "../iron-icons/iron-icons.html">  
+		&lt;style is = "custom-style">  
+		   html, body {  
+			  margin: 0;  
+			  font-family: 'Roboto', 'Noto', sans-serif;  
+			  -webkit-font-smoothing: antialiased;  
+			  background: #f1f1f1;  
+			  max-height: 368px;  
+		   }  
+		   app-toolbar {  
+			  background-color: #4285f4;  
+			  color: #fff;  
+		   }   
+		   paper-icon-button + [main-title] {  
+			  margin-left: 24px;  
+		   }  
+		   paper-progress {  
+			  display: block;  
+			  width: 100%;  
+			  --paper-progress-active-color: rgba(255, 255, 255, 0.5);  
+			  --paper-progress-container-color: transparent;  
+		   }  
+		   app-header {  
+			  @apply(--layout-fixed-top);  
+			  color: #fff;  
+			  --app-header-background-rear-layer: {  
+				 background-color: green;  
+			  };  
+		   }  
+		   sample-content {  
+			  padding-top: 64px;  
+		   }  
+		&lt;/style>  
+		&lt;app-header reveals>  
+		   &lt;app-toolbar>      
+			  &lt;div main-title>First App&lt;/div>      
+		   &lt;/app-toolbar>  
+		&lt;/app-header>  
+		&lt;sample-content>
+		&lt;/sample-content>&lt;br>  
+		&lt;app-box style = "height: 100px;border-style: groove;">  
+		   &lt;div main-title>Hello JavaTpoint....&lt;/div>  
+		&lt;/app-box>   
+	</code>
+ </pre>
+	  		</div>
+		  
+	      <p><strong>Output:</strong></p>
+		  
+        <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/Applayout2.png" alt="Applayout 2"> <br><br>
+		 <img class="img-fluid"  src="https://static.javatpoint.com/polymerjs/images/Applayout3.png" alt="Applayout 3"> 
+		  <br><br>
+	  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

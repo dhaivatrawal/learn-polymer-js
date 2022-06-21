@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Create an App Project</h1>
+              <p>Polymer CLI facilitates you to initialize a project folder with one   of several application templates. The CLI comes with a basic template,   which is the most basic starting point for a Polymer-based application.</p>
+              <h2>App Project Architecture</h2>
+              <p>Polymer app project follows the app shell architecture.</p>
+              <ul>
+                <li><strong>First:</strong> The main entry point of the application   which is served from every valid route. This file should be very small,   since it will be served from different URLs therefore be cached multiple   times. All resource URLs in the entry point need to be absolute, since   it may be served from non-top-level URLs. </li>
+                <li><strong>Second:</strong> The shell or app-shell, which includes the top-level app logic, router, and so on.</li>
+                <li><strong>Third:</strong> These are the fragments of the app. A   fragment can represent the code for a particular view, or other code   that can be loaded lazily (for example, parts of the main app not   required for first paint, like menus that aren't displayed until a user   interacts with the app). The shell is responsible for dynamically   importing the fragments as needed.</li>
+              </ul>
+              <p>The diagram below shows the components of a simple app:</p>
+			  <br>
+            <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/create-an-app-project.png" alt="Create an App Project">
+              <h2>Setup a basic App Project</h2>
+              <p>1. Create a directory for your app project. Let's name it "my-application".</p>
+			  
+<div class="card-body  p-1   "style="background-color: black" >				
+  <pre class="text-light mt-2">mkdir my-application  </pre>
+</div>
+	<p>2. Navigate to that directory.</p>		  
+<div class="card-body  p-1   "style="background-color: black" >				
+  <pre class="text-light mt-2">cd my-application  </pre>
+</div>
+			<p>3. Initialize your app project.</p>  
+<div class="card-body  p-1   "style="background-color: black" >				
+  <pre class="text-light mt-2">polymer init  </pre>
+</div>
+			  
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/polymer-app1.png" alt="polymer app1"></pre>
+		    
+              <p>4. Select application</p>
+              <p>Here we have selected a polymer 2.0 application.</p>
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/polymer-app2.png" alt="polymer app2"></pre>
+              
+            <p>Enter the name of the application. Defaults to the name of the   current directory.  Here, we have chosen the name   "my-first-application".</p>
+			  
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/polymer-app3.png" alt="polymer app3"></pre>
+		    
+              <p>Enter a name for the main element in your project. The main element   is the top-most, application-level element of your app. Defaults to the   name of the current directory, followed by -app. Here, we have chosen   default name.</p>
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/polymer-app4.png" alt="polymer app4"></pre>
+              
+              <p>Enter description for your app.</p>
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/polymer-app5.png" alt="polymer app5"></pre>
+              
+              <p>Now, Polymer CLI will generate files and directories for your app, and will install your project's dependencies.</p>
+              <h2>App project layout</h2>
+              <p>After the initialization process Polymer CLI generates the following files and directories.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+	bower.json  
+	index.html  
+	manifest.json  
+	polymer.json  
+	README.md  
+	src\my-first-application-app\my-first-application-app.html  
+	test\my-first-application-app\my-first-application-app_test.html 	 
+		
+	</code>
+</pre>
+			  
+		    <h2>Run your Polymer App</h2>
+              <p>Execute the following command to run your Polymer app.</p>
+              <p><strong>polymer serve</strong></p>
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/polymer-app8.png" alt="polymer app8"> </pre>
+			 
+              <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/polymer-app9.png" alt="polymer app9"><br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

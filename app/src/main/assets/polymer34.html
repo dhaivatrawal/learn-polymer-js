@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Google Chart</h1>
+              <p>The polymer google chart is an element which contains charts used for   visualizing the data.Google chart contains various charts such as pie   chart, line chart, column chart, area chart, tree map, etc.</p>
+              <p>You can define height and width as style attributes in google chart element.</p>
+			  
+	<pre class="line-numbers">
+		<code class="language-js">
+			   google-chart {  
+			   height: 100px;  
+			   width: 300px;  
+			} 
+		
+		</code>
+	</pre>
+			  
+		    <p>There are many ways to provide data as attribute in JSON format.</p>
+              <h3>Using cols and rows attribute:</h3>
+			  
+	<pre class="line-numbers">
+		<code class="language-js">
+		 
+		    cols = '[{"label":"Month", "type":"string"}, {"label":"Days", "type":"number"}]'  
+    		rows = '[["Oct", 31],["Nov", 30],["Dec", 31]]'  
+		</code>
+	</pre>
+			  
+		    <h3>Using data attribute:</h3>
+              <ul>
+                <li>You can pass data directly</li>
+              </ul>
+			  
+	<pre class="line-numbers">
+		<code class="language-js">
+		 
+		    data = '[["Month", "Days"], ["Oct", 31], ["Nov", 30], ["Dec", 31]]'  
+		</code>
+	</pre>
+			  
+		   	   <ul>
+                <li>You can pass data in URL/li>
+              </ul>	
+			  
+	<pre class="line-numbers">
+		<code class="language-js">
+		 
+		        data = 'http://demo.com/chart-data.json'    
+		</code>
+	</pre>
+			  
+			  
+		      <ul>
+                <li>You can pass data in a Google DataTable object</li>
+              </ul>	
+			  
+    <pre class="line-numbers">
+		<code class="language-js">
+		 
+		   data = '{{dataTable}}'  
+		</code>
+	</pre>
+			  
+			  <ul>
+                <li>Using view attribute:</li>
+              </ul>	
+			  
+    <pre class="line-numbers">
+		<code class="language-js">
+		 
+		   view = '{{dataView}}'   
+		</code>
+	</pre>
+			  <p>Run the following command to install google chart element in your project directory. After that you can use this element in your application:</p>		  
+		   
+<div class="card-body  p-1   "style="background-color: black" >				
+  <pre class="text-light mt-2">bower install PolymerElements/google-chart --save  </pre>
+</div>
+	
+		    <h3>Example:</h3>
+              <p>Create an index.html file and add the following code in it to see the usage of google-chartelement in Polymer.js.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;!DOCTYPE html>  
+		&lt;html>  
+		&lt;head>  
+		&lt;title>google-chart&lt;/title>  
+		&lt;base href = "http://polygit.org/components/">  
+		&lt;script src = "webcomponentsjs/webcomponents-lite.min.js">&lt;/script>  
+		&lt;link rel = "import" href = "google-chart/google-chart.html">  
+		&lt;/head>  
+		&lt;body>  
+		&lt;google-chart  
+				 type = 'pie'  
+				 options = '{"title": "Pie Chart", "vAxis": {"minValue" : 0, "maxValue": 8}}'        
+				 cols = '[{"label": "Country", "type": "string"},{"label": "Value", "type": "number"}]'  
+				 rows = '[["Germany", 5.0],["US", 4.0],["Africa", 11.0],["France", 4.0]]'>  
+		&lt;/google-chart>  
+		&lt;/body>  
+		&lt;/html> 
+		
+	</code>
+</pre>
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

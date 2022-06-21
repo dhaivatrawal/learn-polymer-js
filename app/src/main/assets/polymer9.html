@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">	
+			  <br>
+			  
+			  <h1>Polymer - Iron A11y Keys</h1>
+              <p>The &lt;iron-a11y-keys&gt; element is used to process keyboard commands using cross browser interface.</p>
+              <p>The keys attribute indicates by what combination of keys the event   will be triggered. It accepts modifier keys such as Shift, Control, Alt,   Meta and some common keyboard keys such as a-z, 0-9, F1-F12, Page Up,   Page Down, Left Arrow, Right Arrow, Home, End, Escape, Space, Tab, and   Enter.</p>
+              <p>All the keys should be shortened and should be in lowercase. For   example, Right Arrow is for right, Page Up is for page up, Control is   for ctrl, Escape is for esc, F5 is for f5, etc. </p>
+              <p>Let's take an example to demonstrate the usage of Iron A11y Keys: </p>
+              <p>Open your command prompt and use the following code to navigate to your project folder to use the iron-a11y-keys element.</p>
+			  
+			 <div class="card-body  p-1   "style="background-color: black" >				
+				 <pre class="text-light mt-2">bower install PolymerElements/iron-a11y-keys --save</pre>
+	  		</div>
+			  
+		    <pre class="line-numbers"><code class="language-html">&lt;link rel = "import" href = "/bower_components/iron-a11y-keys/iron-a11y-keys.html"></code></pre>
+		    <h3>Example:</h3>
+			
+  <pre class="line-numbers ">
+    <code class="language-js  "> 
+      &lt;!DOCTYPE html>  
+       &lt;html>  
+        &lt;head>  
+          &lt;base href = "http://polygit.org/components/">  
+          &lt;meta name = "viewport" content = "width = device-width">  
+          &lt;title>iron-a11y-keys&lt;/title>  
+          &lt;link rel = "import" href = "polymer/polymer.html">  
+          &lt;link rel = "import" href = "iron-a11y-keys/iron-a11y-keys.html">  
+          &lt;link rel = "import" href = "paper-input/paper-input.html">  
+         &lt;/head>  
+          
+        &lt;body>  
+          &lt;demo-keys>&lt;/demo-keys>  
+          &lt;dom-module id = "demo-keys">  
+              
+             &lt;template>  
+                &lt;iron-a11y-keys target = "[[_target]]"  
+                   keys = "shift+enter enter esc pageup pagedown up down left right space"   
+                   on-keys-pressed = "_onKeyPress">&lt;/iron-a11y-keys>  
+                   
+                &lt;h4>Press any of the below keys and check console.&lt;/h4>  
+                &lt;p>shift + enter, enter, esc, pageup, pagedown, up, down, left, right,  
+                   space.&lt;/p>  
+                     
+                &lt;paper-input type = "text" value = "{{_value::input}}" id = "input" />  
+             &lt;/template>  
+                 
+             &lt;script>  
+                Polymer ({  
+                   is: 'demo-keys', properties: {  
+                      _value: {  
+                         type: String  
+                      },  
+                      _target: {  
+                         value: function() {  
+                            return this.$.input;  
+                         }  
+                      }  
+                   },  
+                   _onKeyPress: function(e) {  
+                      e.detail.keyboardEvent.preventDefault();  
+                      console.log(e.detail.combo);  
+                   }           
+                });  
+             &lt;/script>  
+          &lt;/dom-module>  
+       &lt;/body>  
+    &lt;/html>     
+  </code>
+</pre>	
+			
+		    <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

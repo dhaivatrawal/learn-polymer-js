@@ -1,0 +1,122 @@
+<resources>
+    <string name="app_name">PolymerJS</string>
+    <string-array name="topic">
+        <item>Polymer Introduction</item>
+        <item>What is Polymer.js</item>
+        <item>Installation</item>
+        <item>Elements</item>
+        <item>App Elements</item>
+        <item>App Layout</item>
+        <item>app-route</item>
+        <item>Iron-element</item>
+        <item>Iron A11y Keys</item>
+        <item>Iron-Ajax</item>
+        <item>Iron-Collapse</item>
+        <item>Iron-Image</item>
+        <item>Iron Dropdown</item>
+        <item>Iron Flex Layout</item>
+        <item>Iron Form</item>
+        <item>iron-icon</item>
+        <item>Iron Swipable Container</item>
+        <item>Paper Elements</item>
+        <item>paper-material</item>
+        <item>Paper icon button</item>
+        <item>Paper Fab</item>
+        <item>paper-checkbox</item>
+        <item>Paper Button</item>
+        <item>Paper Badge</item>
+        <item>Paper progress</item>
+        <item>paper-menu</item>
+        <item>paper input</item>
+        <item>Paper Listbox</item>
+        <item>Paper Drawer Panel</item>
+        <item>Paper Dropdown Menu</item>
+        <item>paper-card</item>
+        <item>Google Web Components</item>
+        <item>Google Analytics Query</item>
+        <item>Google Chart</item>
+        <item>Google Client Loader</item>
+        <item> Hangout Button</item>
+        <item>Google Map</item>
+        <item>Google Signin</item>
+        <item>Streetview Pano</item>
+        <item>Google YouTube</item>
+        <item>Gold Elements</item>
+        <item>CC CVC Input</item>
+        <item>CC Input</item>
+        <item>Email Input</item>
+        <item>Phone Input</item>
+        <item>Neon Element</item>
+        <item>Platinum Elements</item>
+        <item>Platinum Bluetooth</item>
+        <item>Custom Elements</item>
+        <item>Shadow DOM and Styling</item>
+        <item>Polymer Events</item>
+        <item>Polymer Data System</item>
+        <item>Polymer Tools</item>
+        <item>Create an Element Project</item>
+        <item>Create an App Project</item>
+        <item>Polymer CLI Commands</item>
+    </string-array>
+
+    <string-array name="url">
+        <item>polymer1.html</item>
+        <item>polymer2.html</item>
+        <item>polymer3.html</item>
+        <item>polymer4.html</item>
+        <item>polymer5.html</item>
+        <item>polymer6.html</item>
+        <item>polymer7.html</item>
+        <item>polymer8.html</item>
+        <item>polymer9.html</item>
+        <item>polymer10.html</item>
+        <item>polymer11.html</item>
+        <item>polymer12.html</item>
+        <item>polymer13.html</item>
+        <item>polymer14.html</item>
+        <item>polymer15.html</item>
+        <item>polymer16.html</item>
+        <item>polymer17.html</item>
+        <item>polymer18.html</item>
+        <item>polymer19.html</item>
+        <item>polymer20.html</item>
+        <item>polymer21.html</item>
+        <item>polymer22.html</item>
+        <item>polymer23.html</item>
+        <item>polymer24.html</item>
+        <item>polymer25.html</item>
+        <item>polymer26.html</item>
+        <item>polymer27.html</item>
+        <item>polymer28.html</item>
+        <item>polymer29.html</item>
+        <item>polymer30.html</item>
+        <item>polymer31.html</item>
+        <item>polymer32.html</item>
+        <item>polymer33.html</item>
+        <item>polymer34.html</item>
+        <item>polymer35.html</item>
+        <item>polymer36.html</item>
+        <item>polymer37.html</item>
+        <item>polymer38.html</item>
+        <item>polymer39.html</item>
+        <item>polymer40.html</item>
+        <item>polymer41.html</item>
+        <item>polymer42.html</item>
+        <item>polymer43.html</item>
+        <item>polymer44.html</item>
+        <item>polymer45.html</item>
+        <item>polymer46.html</item>
+        <item>polymer47.html</item>
+        <item>polymer48.html</item>
+        <item>polymer49.html</item>
+        <item>polymer50.html</item>
+        <item>polymer51.html</item>
+        <item>polymer52.html</item>
+        <item>polymer53.html</item>
+        <item>polymer54.html</item>
+        <item>polymer55.html</item>
+        <item>polymer56.html</item>
+    </string-array>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+</resources>

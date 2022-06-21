@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">	
+			  
+			  <br>
+			  
+			  
+		    <h2>Polymer app-route</h2>
+            <p>The app-route element is used to utilize an object, which describe a   state about the current route by using route property. It will determine   the state using pattern property and determines some data related to   the route, and a tail that contains the rest of the route as shown in   the following code. </p>
+            <p><strong>Syntax:</strong></p>
+			  
+<pre class="line-numbers">
+		<code  class="language-js">			  
+			   &lt;app-location route = "{{route}}">&lt;/app-location>  
+					&lt;app-route  
+					   route = "{{route}}"  
+					   pattern = "/:page"  
+					   data = "{{routeData}}"  
+					   tail = "{{subroute}}">  
+					&lt;/app-route>  
+					&lt;app-route  
+					   route = "{{subroute}}"  
+					   pattern = "/:id"  
+					   data = "{{subrouteData}}">  
+					&lt;/app-route>   		  
+		</code>
+  </pre>
+			  <br>
+			  
+		    <h2>Parameter Explanation</h2>
+              <table class="table-responsive table-striped">
+                <tbody class="table">
+                  <tr>
+                    <th>Index</th>
+                    <th>Field</th>
+                    <th>Description</th>
+                  </tr>
+                  <tr>
+                    <td>1)</td>
+                    <td>app-location</td>
+                    <td>It is an element that provides synchronization between the   browser location bar and the state of an app, and produces a route   value.</td>
+                  </tr>
+                  <tr>
+                    <td>2)</td>
+                    <td>pattern</td>
+                    <td>The route.path property is matched by comparing it to the pattern property.</td>
+                  </tr>
+                  <tr>
+                    <td>3)</td>
+                    <td>app-route</td>
+                    <td>It sets the data property with an object, whose properties   correspond to the parameters in pattern property. It is responsive to   bi-directional changes to the data objects they produce.</td>
+                  </tr>
+                  <tr>
+                    <td>4)</td>
+                    <td>tail</td>
+                    <td>It represents the remaining part of the route state, after the pattern has been applied to a matching route.</td>
+                  </tr>
+                </tbody>
+              </table>
+			  <br>
+              <h2>Hashes vs Paths</h2>
+              <p>The portion of the URL pathname is used by an app-location route with   the help of backend server. The app-location can be configured to use   the hash part using the following attribute.</p>
+			  
+			  <pre class="line-numbers"><code class="language-js"> &lt;app-location route = "{{route}}" use-hash-as-path>&lt;/app-location></code></pre>
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

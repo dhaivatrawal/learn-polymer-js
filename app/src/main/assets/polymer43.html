@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Gold CC Input</h1>
+              <p>The Polymer Gold CC Input is a material designed style input text   field. It is used for entering credit card number. As the user type the   code, it adds a space after every 4 digits.</p>
+              <p><strong>Syntax:</strong></p>
+			  
+	<pre class="line-numbers">
+		<code class="language-js">
+		    <gold-cc-input></gold-cc-input>   
+		
+		</code>
+	</pre>
+		    <p>This element has an optional label, which is the "card number" by default as shown below -</p>
+	
+	<pre class="line-numbers">
+		<code class="language-js">
+		
+		      &lt;gold-cc-input label = "CC">&lt;/gold-cc-input>   
+		
+		</code>
+	</pre>
+			  
+		    <h2>Validation</h2>
+              <p>We can validate the entered credit card number whether it is valid or   invalid along with the type of card by using the Luhn checksum. </p>
+              <p>If you want to validate manually, you can use validate() method that   returns true if it is valid otherwise false, if it is not valid. You can   also use auto-validate and required attributes to make the input   automatically validated.</p>
+              <p>It includes different types of credit cards such as amex,   diners_club, discover, jcb, laser, maestro, mastercard, visa,   visa_electron etc. These are provided through cardTypes property.</p>
+              <h3>Example</h3>
+              <p>Run the following command to install gold-cc-input element in your   project directory. After that you can use this element in your   application:</p>
+			  
+			  
+<div class="card-body  p-1   "style="background-color: black" >				
+  <pre class="text-light mt-2">bower install PolymerElements/gold-cc-input -save  </pre>
+</div>
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/gold-cc1.png" alt="gold cc 1"></pre>
+		    
+              <p>It will install all the related elements of polymer-gold-cc-input under the bower_components folder.</p>
+              <p>Create an index.html file and add the following code in it to see the usage of gold-cc-input element in Polymer.js.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		   &lt;!DOCTYPE html>  
+		&lt;html>  
+		   &lt;head>  
+			  &lt;title>Gold CC Input&lt;/title>  
+			  &lt;meta charset = "utf-8">  
+			  &lt;script src = "bower_components/webcomponentsjs/webcomponents-lite.min.js">&lt;/script>  
+			  &lt;link rel = "import" href = "bower_components/polymer/polymer.html">  
+			  &lt;link rel = "import" href = "bower_components/gold-cc-input/gold-cc-input.html">  
+		   &lt;/head>  
+		   &lt;body>  
+			  &lt;h3>Pre-validated credit card numbers&lt;/h3>  
+			  &lt;gold-cc-input   
+				 label = "Visa"   
+				 auto-validate   
+				 value = "4111111111111111"   
+				 style = "width:40%; display:inline-block;">  
+			  &lt;/gold-cc-input>&lt;br/>   
+			  &lt;gold-cc-input   
+				 label = "Invalid Visa"   
+				 auto-validate   
+				 value = "4111 1111 1111 0021"   
+				 style = "width:40%; display:inline-block;">  
+			  &lt;/gold-cc-input>      
+			  &lt;h3>Displayes error message for wrong number&lt;/h3>  
+			  &lt;gold-cc-input   
+				 label = "Enter a credit card number"   
+				 auto-validate   
+				 error-message = "Please enter a valid credit card number"   
+				 style = "width:40%; display:inline-block;">  
+			  &lt;/gold-cc-input>  
+		   &lt;/body>  
+		&lt;/html>  
+
+	</code>
+</pre>
+			  
+			  <p><strong>Output:</strong></p>
+				<img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/gold-cc2.png" alt="gold cc 2">
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

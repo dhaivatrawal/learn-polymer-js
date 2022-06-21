@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:padding="10dp"
+        android:id="@+id/loginnn"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_margin="20dp">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="40dp"
+            android:layout_height="640dp"
+            android:src="@drawable/ic_admin"/>
+
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/admin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="ADMIN LOGIN"
+            android:textStyle="bold"
+            android:textSize="31sp" />
+
+    </RelativeLayout>
+
+
+      <android.support.v7.widget.CardView
+          android:layout_below="@+id/loginnn"
+          android:layout_marginTop="10dp"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          app:cardMaxElevation="10dp"
+          android:elevation="7dp"
+          app:cardUseCompatPadding="true"
+          android:id="@+id/crd">
+
+          <LinearLayout
+              android:padding="10dp"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+          <android.support.design.widget.TextInputLayout
+              android:layout_marginTop="10dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <EditText
+                  android:id="@+id/username"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:hint="User Name"
+                  android:textSize="18sp" />
+
+
+          </android.support.design.widget.TextInputLayout>
+
+          <android.support.design.widget.TextInputLayout
+              android:layout_marginTop="5dp"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+              <EditText
+                  android:id="@+id/pass"
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent"
+                  android:hint="User Name"
+                  android:textSize="18sp" />
+
+
+          </android.support.design.widget.TextInputLayout>
+
+              <Button
+                  android:id="@+id/btnlogin"
+                  android:layout_width="match_parent"
+                  android:layout_height="50dp"
+                  android:textSize="20sp"
+                  android:text="LOGIN"
+                  android:background="@color/colorPrimary"
+                  android:textColor="@color/white"
+                  android:layout_marginHorizontal="60dp"
+                  android:layout_marginTop="20sp"
+                  android:layout_marginBottom="10dp"/>
+
+          </LinearLayout>
+
+
+
+      </android.support.v7.widget.CardView>
+
+</RelativeLayout>

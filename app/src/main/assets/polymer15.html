@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Iron Form</h1>
+              <p>The Polymer iron-form is an HTML form element which is used to   validate and submit any custom element and native elements. Both GET and   POST methods are supported and ironajax element is used to submit the   data to the action URL.</p>
+              <p>By default, the native button element submits the following form:</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">    
+		&lt;form is = "iron-form" id = "form" method = "post" action = "/form/handler">  
+		&lt;paper-input name = "password" label = "Password">&lt;/paper-input>  
+		&lt;input name = "address">  
+        ...
+	    &lt;/form> 				 
+	</code>
+</pre>
+			  
+		    You need to call the form's submit method explicitly, if you want to submit it from the custom element's click handler. i.e.
+			  
+			  
+	  		<pre class="line-numbers">
+					<code class="language-js"> 
+					&lt;paper-button raised onclick = "submitForm()">Submit&lt;/paper-button>  
+						function submitForm() {  
+						   document.getElementById('form').submit();  
+						}
+				 	</code></pre>
+			  
+	        <h3>Example</h3>
+			  
+<pre class="line-numbers">
+	<code class="language-js"> 
+		lt;!DOCTYPE html>  
+		&lt;html>  
+		   &lt;head>  
+			  &lt;title>iron-form&lt;/title>  
+			  &lt;base href = "https://polygit.org/polymer+1.5.0/components/">  
+			  &lt;script src = "webcomponentsjs/webcomponents-lite.min.js">&lt;/script>  
+			  &lt;link rel = "import" href = "polymer/polymer.html">  
+			  &lt;link rel = "import" href = "iron-form/iron-form.html">  
+			  &lt;link rel = "import" href = "paper-input/paper-input.html">  
+			  &lt;link rel = "import" href = "paper-button/paper-button.html">  
+			  &lt;link rel = "import" href = "paper-dropdown-menu/paper-dropdown-menu.html">  
+			  &lt;link rel = "import" href = "paper-menu/paper-menu.html">  
+			  &lt;link rel = "import" href = "paper-item/paper-item.html">  
+	  			&lt;style>  
+				 .paperbtn {  
+					background: #4682B4;  
+					color: white;  
+				 }  
+				 .paperinput{  
+					width: 25%;  
+				 }  
+				 .menu{  
+					width:25%;  
+				 }  
+			  &lt;/style>  
+		   &lt;/head>  
+   		&lt;body>  
+			  &lt;form is = "iron-form" method = "get" action = "/" id = "basic">  
+				 &lt;paper-input class = "paperinput" name = "name" label = "Enter your name" required&lt;  
+				 &lt;/paper-input>  
+				 &lt;br>  
+				 &lt;input type = "checkbox" name = "vehicle" value = "bike"> I have a bike  
+				 &lt;br>  
+				 &lt;input type = "checkbox" name = "vehicle" value = "car"> I have a car  
+				 &lt;br>  
+				 &lt;paper-dropdown-menu class = "menu" label = "Icecream Flavours" name = "Flavours">  
+					&lt;paper-menu class = "dropdown-content">  
+					   &lt;paper-item value = "vanilla">Vanilla&lt;/paper-item>  
+					   &lt;paper-item value = "strawberry">Strawberry&lt;/paper-item>  
+					   &lt;paper-item value = "caramel">Caramel&lt;/paper-item>  
+					&lt;/paper-menu>  
+				 &lt;/paper-dropdown-menu>&lt;br>  
+		 		&lt;paper-button class = "paperbtn" raised onclick = "_submit(event)">Submit&lt;/-button>  
+				 &lt;paper-button class = "paperbtn" raised onclick = "_reset(event)">Reset&lt;/paper-button>  
+				 &lt;h4>You entered the details:&lt;/h4>  
+				 &lt;div class = "output">&lt;/div>  
+			  &lt;/form>  
+	  		&lt;script>  
+				 function _submit(event) {  
+					Polymer.dom(event).localTarget.parentElement.submit();  
+				 }  
+				 function _reset(event) {  
+					var form  =  Polymer.dom(event).localTarget.parentElement  
+					form.reset();  
+					form.querySelector('.output').innerHTML  =  '';  
+				 }  
+				 basic.addEventListener('iron-form-submit', function(event) {  
+					this.querySelector('.output').innerHTML  =  JSON.stringify(event.detail);  
+				 });  
+			  &lt;/script>  
+		   &lt;/body>  
+		&lt;/html>  
+	</code>
+</pre>
+			  
+			  
+	        <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  <h1>Polymer paper-card</h1>
+              <p>The polymer paper-card is a simple material design piece of paper   with unique related data. To get the paper-card in your directory, you   should use the following command in the command prompt. </p>
+			  
+		    <div class="card-body  p-1   "style="background-color: black" >				
+			  <pre class="text-light mt-2">bower install --save PolymerElements/paper-card  </pre>
+			  </div>
+			  
+			  <br>
+			  <pre><img src="https://static.javatpoint.com/polymerjs/images/paper-card1.png" alt="paper card 1"></pre>
+		    
+              <h3>Example</h3>
+              <p>Create an index.html file and add the following code in it to see the use of paper-card element in Polymer.js.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		&lt;!doctype html>  
+			&lt;html>  
+			   &lt;head>  
+				  &lt;link rel = 'import' href = 'my-app.html'>  
+			   &lt;/head>  
+			   &lt;body>  
+				  &lt;h2>Paper-Card Example&lt;/h2>  
+				  &lt;my-app>&lt;/my-app>  
+			   &lt;/body>  
+		&lt;/html>  
+
+	</code>
+</pre>
+			  
+			  <p>Now, open the my-app.html file and include the following code in it. </p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		   &lt;link rel = 'import' href = 'bower_components/polymer/polymer.html'>  
+		&lt;link rel = "import" href = "bower_components/paper-button/paper-button.html">  
+		&lt;link rel = "import" href = "bower_components/paper-styles/paper-styles.html">  
+		&lt;link rel = "import" href = "bower_components/paper-card/paper-card.html">  
+		&lt;link rel = "import" href = "bower_components/iron-icons/iron-icons.html">  
+		&lt;link rel = "import" href = "bower_components/iron-icons/communication-icons.html">  
+		&lt;dom-module id = 'my-app'>  
+		   &lt;template>  
+			  &lt;style is = "custom-style">  
+				 body {  
+					display: flex;  
+					align-items: center;  
+					justify-content: center;  
+				 }          
+				 paper-card {  
+					max-width: 500px;  
+				 }           
+				 .cafe-header { @apply(--paper-font-headline); }  
+				 .cafe-light { color: var(--paper-grey-600); }  
+				 .cafe-location {  
+					float: right;  
+					font-size: 15px;  
+					vertical-align: middle;  
+				 }           
+				 .cafe-reserve { color: var(--google-blue-500); }  
+				 iron-icon.star {  
+					--iron-icon-width: 16px;  
+					--iron-icon-height: 16px;  
+					color: var(--paper-amber-500);  
+				 }  
+			  &lt;/style>  
+				   &lt;paper-card >  
+				 &lt;div class = "card-content">  
+					&lt;div class = "cafe-header">JavaTpoint&lt;/div>  
+					&lt;div class = "cafe-rating">  
+					   &lt;iron-icon class = "star" icon = "star">&lt;/iron-icon>  
+					   &lt;iron-icon class = "star" icon = "star">&lt;/iron-icon>  
+					   &lt;iron-icon class = "star" icon = "star">&lt;/iron-icon>  
+					   &lt;iron-icon class = "star" icon = "star">&lt;/iron-icon>  
+					   &lt;iron-icon class = "star" icon = "star">&lt;/iron-icon>  
+					&lt;/div>          
+					&lt;p>Free Tutorials&lt;/p>  
+					&lt;p class = "cafe-light">JavaTpoint is a platform for all technologies.&lt;/p>  
+				 &lt;/div>  
+			  &lt;/paper-card>  
+		   &lt;/template>     
+		   &lt;script>  
+			  Polymer ({  
+				 is: 'my-app',  
+				 ready: function() {  
+					this.async(function() {  
+					});  
+				 }  
+			  });  
+		   &lt;/script>  
+		&lt;dom-module>  
+		
+	</code>
+</pre>
+	
+	<p><strong>Output:</strong></p>
+<img src="https://static.javatpoint.com/polymerjs/images/paper-card2.png" alt="paper card 2">
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/my.css"> 
+	  	<link href="css/prism.css" rel="stylesheet" />
+
+    <title>PolymerJS</title>
+	  <style type="text/css">
+	  
+	  </style>
+  </head>
+  <body class="container-fluid">
+	  
+	  <div class="row">		
+		  
+		  <div class="col-12">
+			  <br>
+			  
+			  <h1>Polymer Paper progress</h1>
+              <p>In Polymer.js, paper progress bar is used to determine the percentage   of task completed. It specifies how much time a user have to spend for   completing a task. Secondary progress is also available for displaying   intermediate progress.</p>
+              <p>Use the following command in your command prompt to get paper-progress in your directory in working condition.</p>
+			  
+			<div class="card-body  p-1   "style="background-color: black" >				
+			  <pre class="text-light mt-2">bower install --save PolymerElements/paper-progress  </pre>
+	  		</div>
+			  
+			  <br>
+		    <pre><img src="https://static.javatpoint.com/polymerjs/images/paper-progress.png" alt="paper progress"></pre>
+		    
+              <h3>Example: </h3>
+              <p>Create an index.html file and add the following code in it to see the use of paper progress element in Polymer.js. </p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+		&lt;!doctype html>  
+			&lt;html>  
+			   &lt;head>  
+				  &lt;link rel = 'import' href = 'my-app.html'>  
+			   &lt;/head>  
+			   &lt;body>      
+				  &lt;my-app>&lt;/my-app>  
+			   &lt;/body>  
+			&lt;/html>
+	</code>
+</pre>
+			  
+			  <p>Now, open my-app.html file and include the following code in it.</p>
+			  
+<pre class="line-numbers">
+	<code class="language-js">
+		 
+		&lt;link rel = 'import' href = 'bower_components/polymer/polymer.html'>  
+		&lt;link rel = "import" href = "bower_components/paper-progress/paper-progress.html">  
+		&lt;dom-module id = 'my-app'>  
+		   &lt;template>  
+			  &lt;style>  
+				 paper-progress {  
+					display: block;  
+					width: 30%;  
+					margin: 20px 0;  
+				 }  
+			  &lt;/style>        
+			  &lt;h3>Paper-Progress Example&lt;/h3>  
+			  &lt;p>70% completed&lt;/p>  
+			  &lt;paper-progress value = "70">&lt;/paper-progress>  
+			  &lt;p>45% completed&lt;/p>  
+			  &lt;paper-progress value = "45">&lt;/paper-progress>  
+			  &lt;p>20% completed&lt;/p>  
+			  &lt;paper-progress value = "20">&lt;/paper-progress>  
+		   &lt;/template>    
+		   &lt;script>  
+			  Polymer ({  
+				 is: 'my-app', ready: function() {  
+					this.async(function() {           
+					});  
+				 }  
+			  });  
+		   &lt;/script>  
+		&lt;/dom-module>  
+	</code>
+</pre>
+			  <p>Output :</p>
+			  <img class="img-fluid" src="https://static.javatpoint.com/polymerjs/images/paper-progress2.png" alt="paper progress 2"> 
+			  
+	
+            <br><br>
+		  
+		  </div>  
+		  
+	  
+	  </div>
+  	
+
+    
+    <script src="js/jquery-3.2.1.slim.min.js" ></script>
+    <script src="js/popper.min.js" ></script>
+    <script src="js/bootstrap.min.js"></script>
+	  <script src="js/prism.js"></script>	
+ 
+  </body>
+</html>
